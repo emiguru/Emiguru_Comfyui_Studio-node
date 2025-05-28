@@ -127,8 +127,9 @@ from .style_selector import StyleSelector
 from .split_image import SplitImageGrid, ReassembleImageGrid
 from .API_openai import APIGenerateGPT4o
 
-from .masks_nodes import LargestMaskOnly, BoundingRectangleMask
+from .masks_nodes import LargestMaskOnly, BoundingRectangleMask, BoundingRectangleMaskBlur
 from .openai_nodes import OpenAIVisionNode
+# MultiOpenAIVisionNode
 from .loop_random_seed import LoopRandomSeed
 
 # from .video_text_generator import VideoTextGenerator
@@ -136,16 +137,25 @@ from .loop_random_seed import LoopRandomSeed
 # from .remote_nodes import RemoteVAEDecoderNodeTiled, RemoteVAEDecoderNode, LoadFromBase64, SaveTensors, LoadTensor
 # from .fix_face import FixFace, FaceSettings
 from .image_cut_and_shift import HorizontalCutAndShift
+from .load_image_from_path import LoadImageWithTransparencyFromPath
+# from .kofi_nodes import CivitAILoraSelectorWanVideo, CivitAILoraSelectorHunyuan
+# from .json_prompt_extractor import JSONImagePromptExtractor
 
 #RemoteTextEncodingWithCLIPs
 
 NODE_CLASS_MAPPINGS = {
+    # "Bjornulf_LoraSelectorHunyuan": CivitAILoraSelectorHunyuan,
+    # "Bjornulf_LoraSelectorWanVideo": CivitAILoraSelectorWanVideo,
+    # "Bjornulf_JSONImagePromptExtractor": JSONImagePromptExtractor,
     "Bjornulf_MatchTextToInput": MatchTextToInput,
     "Bjornulf_LargestMaskOnly": LargestMaskOnly,
     "Bjornulf_BoundingRectangleMask": BoundingRectangleMask,
+    "Bjornulf_BoundingRectangleMaskBlur": BoundingRectangleMaskBlur,
     "Bjornulf_OpenAIVisionNode": OpenAIVisionNode,
+    # "Bjornulf_MultiOpenAIVisionNode": MultiOpenAIVisionNode,
     "Bjornulf_LoopRandomSeed": LoopRandomSeed,
     "Bjornulf_HorizontalCutAndShift": HorizontalCutAndShift,
+    "Bjornulf_LoadImageWithTransparencyFromPath": LoadImageWithTransparencyFromPath,
     # "Bjornulf_PurgeCLIPNode": PurgeCLIPNode,
     # "Bjornulf_RemoteTextEncodingWithCLIPs": RemoteTextEncodingWithCLIPs,
     
@@ -327,11 +337,17 @@ NODE_CLASS_MAPPINGS = {
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
+    #"Bjornulf_LoraSelectorHunyuan": "☕ Lora Selector Hunyuan",
+    #"Bjornulf_LoraSelectorWanVideo": "☕ Lora Selector WanVideo",
+    #"Bjornulf_JSONImagePromptExtractor": "JSONImagePromptExtractor", 
     "Bjornulf_MatchTextToInput": "🔛📝 Match 10 Text to Input",
     "Bjornulf_LargestMaskOnly": "👺🔪 Largest Mask Only",
     "Bjornulf_BoundingRectangleMask": "👺➜▢ Convert mask to rectangle",
+    "Bjornulf_BoundingRectangleMaskBlur": "👺➜▢ Convert mask to rectangle (with Blur)",
     "Bjornulf_OpenAIVisionNode": "🔮 OpenAI Vision Node",
+    #"Bjornulf_MultiOpenAIVisionNode": "🔮 OpenAI Vision Node (⚠️ Multiple images accepted as input ⚠️)",
     "Bjornulf_LoopRandomSeed": "♻🎲 Loop Random Seed",
+    "Bjornulf_LoadImageWithTransparencyFromPath": "📥🖼 Load Image with Transparency From Path",
     # "Bjornulf_RemoteTextEncodingWithCLIPs": "[BETA] 🔮 Remote Text Encoding with CLIPs",
     # "Bjornulf_ConditionalSwitch": "ConditionalSwitch",
     # "Bjornulf_PurgeCLIPNode": "🧹📎 Purge CLIP",
