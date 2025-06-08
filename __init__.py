@@ -141,9 +141,13 @@ from .load_image_from_path import LoadImageWithTransparencyFromPath
 # from .kofi_nodes import CivitAILoraSelectorWanVideo, CivitAILoraSelectorHunyuan
 # from .json_prompt_extractor import JSONImagePromptExtractor
 
+from .upscaler_transparency import ImageUpscaleWithModelTransparency
+from .load_base64_transparency import loadImageBase64Transparency
 #RemoteTextEncodingWithCLIPs
 
 NODE_CLASS_MAPPINGS = {
+    "Bjornulf_ImageUpscaleWithModelTransparency": ImageUpscaleWithModelTransparency,
+    "Bjornulf_loadImageBase64Transparency": loadImageBase64Transparency,
     # "Bjornulf_LoraSelectorHunyuan": CivitAILoraSelectorHunyuan,
     # "Bjornulf_LoraSelectorWanVideo": CivitAILoraSelectorWanVideo,
     # "Bjornulf_JSONImagePromptExtractor": JSONImagePromptExtractor,
@@ -337,6 +341,8 @@ NODE_CLASS_MAPPINGS = {
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
+    "Bjornulf_loadImageBase64Transparency": "📥🖼 Load Image Base64 (Transparency)",
+    "Bjornulf_ImageUpscaleWithModelTransparency": "🖼 Upscale Image with Transparency (with model)",
     #"Bjornulf_LoraSelectorHunyuan": "☕ Lora Selector Hunyuan",
     #"Bjornulf_LoraSelectorWanVideo": "☕ Lora Selector WanVideo",
     #"Bjornulf_JSONImagePromptExtractor": "JSONImagePromptExtractor", 
