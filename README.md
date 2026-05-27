@@ -5,12 +5,6 @@ You can manage looping operations, generate randomized content, trigger logical 
 
 ⚠️ Warning : Very active development. Work in progress. 🏗  
 
-Last update video :  
-[![Watch the video](https://img.youtube.com/vi/YiGgyh7nQRg/hqdefault.jpg)](https://www.youtube.com/watch?v=YiGgyh7nQRg)  
-
-# Watch Video (Quick overview 28 minutes) + Updates in video playlist :
-[![Watch the video](https://img.youtube.com/vi/jTg9QsgKYmA/hqdefault.jpg)](https://www.youtube.com/playlist?list=PL_hRi_PPLLWvUNfG_np_d3K0nBCabM3iQ)
-
 # Coffee : ☕☕☕☕☕ 5/5
 
 Very active development, new nodes, new features, new ideas, new possibilities...  
@@ -20,9 +14,9 @@ Support me, this project and my other AI exciting projects : ❤️❤️❤️ 
 
 # ☘ This project is part of my AI trio. ☘
 
-1 - 📝 Text/Chat AI generation : [Emiguru Lobe Chat Fork](https://github.com/justUmen/emiguru_lobe-chat)  
-2 - 🔊 Speech AI generation : [Emiguru Text To Speech](https://github.com/justUmen/emiguru_XTTS)  
-<u>**3 - 🎨 Image AI generation :** [Emiguru Comfyui custom nodes](https://github.com/justUmen/Emiguru_custom_nodes) (you are here)</u>  
+1 - 📝 Text/Chat AI generation : [Emiguru Lobe Chat Fork](https://github.com/emiguru/Emiguru_lobe-chat)  
+2 - 🔊 Speech AI generation : [Emiguru Text To Speech](https://github.com/emiguru/Emiguru_XTTS)  
+<u>**3 - 🎨 Image AI generation :** [Emiguru Comfyui custom nodes](https://github.com/emiguru/Emiguru_Comfyui_Studio-node) (you are here)</u>  
 
 # 📋 Nodes menu by category
 
@@ -299,7 +293,7 @@ huggingface-cli download comfyanonymous/flux_text_encoders clip_l.safetensors --
 huggingface-cli download comfyanonymous/flux_text_encoders t5xxl_fp16.safetensors --local-dir /workspace/ComfyUI/models/clip
 huggingface-cli download black-forest-labs/FLUX.1-dev ae.safetensors --local-dir /workspace/ComfyUI/models/vae
 ```
-To use Flux you can just drag and drop in your browser comfyui interface the .json from my github repo : `workflows/FLUX_dev_troll.json`, direct link : <https://github.com/justUmen/ComfyUI-EmiguruNodes/blob/main/workflows/FLUX_dev_troll.json>.  
+To use Flux you can just drag and drop in your browser comfyui interface the .json from my github repo : `workflows/FLUX_dev_troll.json`, direct link : <https://github.com/emiguru/Emiguru_Comfyui_Studio-node/blob/main/workflows/FLUX_dev_troll.json>.  
 
 For downloading from civitai (get token here <https://civitai.com/user/account>), just copy/paste the link of checkpoint you want to download and use something like that, with your token in URL :  
 ```
@@ -439,7 +433,7 @@ cd /where/you/installed/ComfyUI && python main.py
 - **0.68**: Update kokoro TTS node with connect_to_workflow and same outputs as XTTS.
 - **0.69**: Small fixes
 - **0.70**: ❗Breaking changes : "Line Selector Node" is now a "universal node" : manual selection, random, and LOOP + Sequential.
-Text replace now have multine option for regex. (https://github.com/justUmen/Emiguru_custom_nodes/issues/17) - can remove <think> tag from ollama.  
+Text replace now have multine option for regex. (https://github.com/emiguru/Emiguru_Comfyui_Studio-node/issues/17) - can remove <think> tag from ollama.  
 8 new nodes : "🖼👁 Preview (first) image", "💾 Huggingface Downloader", "👑 Combine Loras, Lora stack", "📥 Load Global Variables", "💾 Save Global Variables", "📝👈 Model-Clip-Vae selector (🎲 or ♻ or ♻📑)", "📒 Note", "🖼📒 Image Note".
 Fix a lot of code everywhere, a little better logging system, etc...  
 WIP : Rewrite of all my ffmpeg nodes. (Still need improvements and fixes, will do that in 0.71?) Maybe don't use them yet...
@@ -629,10 +623,10 @@ I recommend you to keep saving them in "Emiguru/Text" (Which is in the Comfyui f
 
 ![Save Text](screenshots/save_text.png)
 
-## 16 - 💾🖼💬 Save image for Emiguru LobeChat (❗For my custom [lobe-chat](https://github.com/justUmen/emiguru_lobe-chat)❗)
+## 16 - 💾🖼💬 Save image for Emiguru LobeChat (❗For my custom [lobe-chat](https://github.com/emiguru/Emiguru_lobe-chat)❗)
 
 **Description:**  
-❓ I made that node for my custom lobe-chat to send+receive images from Comfyui API : [lobe-chat](https://github.com/justUmen/emiguru_lobe-chat)  
+❓ I made that node for my custom lobe-chat to send+receive images from Comfyui API : [lobe-chat](https://github.com/emiguru/Emiguru_lobe-chat)  
 It will save the image in the folder `output/emiguru_LOBECHAT/`. 
 The name will start at `api_00001.png`, then `api_00002.png`, etc...  
 It will also create a link to the last generated image at the location `output/emiguru_API_LAST_IMAGE.png`.  
@@ -830,8 +824,8 @@ Use my TTS server to generate high quality speech from text, with any voice you 
 ❗ Node never tested on windows, only on linux for now. ❗  
 
 Use my TTS server to generate speech from text, based on XTTS v2.  
-❗ Of course to use this comfyui node (frontend) you need to use my TTS server (backend) : <https://github.com/justUmen/emiguru_XTTS>  
-I made this backend for <https://github.com/justUmen/emiguru_lobe-chat>, but you can use it with comfyui too with this node.  
+❗ Of course to use this comfyui node (frontend) you need to use my TTS server (backend) : <https://github.com/emiguru/Emiguru_XTTS>  
+I made this backend for <https://github.com/emiguru/Emiguru_lobe-chat>, but you can use it with comfyui too with this node.  
 After having `Emiguru_XTTS` installed, you NEED to create a link in my Comfyui custom node folder called `speakers` : `ComfyUI/custom_nodes/Emiguru_custom_nodes/speakers`  
 That link must be a link to the folder where you installed/stored the voice samples you use for my TTS, like `default.wav`.  
 If my TTS server is running on port 8020 (You can test in browser with the link <http://localhost:8020/tts_stream?language=en&speaker_wav=default&text=Hello>) and voice samples are good, you can use this node to generate speech from text.  
