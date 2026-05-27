@@ -17,7 +17,7 @@ class SelectImageFromList:
     RETURN_TYPES = ("IMAGE",)
     RETURN_NAMES = ("selected_image",)
     FUNCTION = "select_an_image"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def select_an_image(self, all_images, selection):
         num_images = all_images.shape[0]

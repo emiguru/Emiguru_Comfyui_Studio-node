@@ -1,9 +1,9 @@
 import { app } from "../../../scripts/app.js";
 
 app.registerExtension({
-    name: "Bjornulf.CivitAIModelSelector",
+    name: "Emiguru.CivitAIModelSelector",
     async nodeCreated(node) {
-        if (node.comfyClass === "Bjornulf_CivitAIModelSelector") {
+        if (node.comfyClass === "emiguru_civitAIModelSelector") {
             // Find all upload widgets
             const uploadWidgets = node.widgets.filter(w => w.type === "file");
             
@@ -29,9 +29,9 @@ app.registerExtension({
 });
 
 app.registerExtension({
-    name: "Bjornulf.LoadCivitAILinks",
+    name: "Emiguru.LoadCivitAILinks",
     async nodeCreated(node) {
-        if (node.comfyClass === "Bjornulf_LoadCivitAILinks") {
+        if (node.comfyClass === "Emiguru_LoadCivitAILinks") {
             // Add a refresh button widget
             const refreshButton = node.addWidget(
                 "button",

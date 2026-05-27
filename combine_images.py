@@ -20,7 +20,7 @@ class CombineImages:
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "all_in_one_images"
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def all_in_one_images(self, number_of_images, all_in_one, **kwargs):
         # Retrieve all inputs based on number_of_images

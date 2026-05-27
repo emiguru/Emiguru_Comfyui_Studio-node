@@ -28,7 +28,7 @@ class OpenAIVisionNode:
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("analysis",)
     FUNCTION = "analyze_image"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def analyze_image(self, image, prompt, model, api_key=""):
         """Process the image with OpenAI's Vision API"""

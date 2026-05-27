@@ -36,7 +36,7 @@ class HuggingFaceDownloader:
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("status",)
     FUNCTION = "download_model"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def download_model(self, hf_token, repo_id, filename, model_type, custom_path=None):
         download_dir = "Unknown"

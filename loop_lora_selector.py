@@ -30,7 +30,7 @@ class LoopLoraSelector:
     RETURN_TYPES = ("MODEL", "CLIP", "STRING", "STRING", "STRING")
     RETURN_NAMES = ("model", "clip", "lora_path", "lora_name", "lora_folder")
     FUNCTION = "loop_select_lora"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     OUTPUT_IS_LIST = (True, True, True, True, True)
 
     def loop_select_lora(self, number_of_loras, model, clip, **kwargs):

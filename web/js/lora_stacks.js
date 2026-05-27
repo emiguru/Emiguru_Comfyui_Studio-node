@@ -1,9 +1,9 @@
 import { app } from "../../../scripts/app.js";
 
 app.registerExtension({
-    name: "Bjornulf.AllLoraSelector",
+    name: "Emiguru.AllLoraSelector",
     async nodeCreated(node) {
-        if (node.comfyClass === "Bjornulf_AllLoraSelector") {
+        if (node.comfyClass === "Emiguru_AllLoraSelector") {
             node.properties = node.properties || {};
             
             const updateLoraInputs = () => {

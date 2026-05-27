@@ -11,10 +11,10 @@ function imageDataToUrl(data) {
 }
 
 app.registerExtension({
-  name: "Bjornulf.FourImageViewer",
+  name: "Emiguru.FourImageViewer",
   async nodeCreated(node) {
     // Ensure this applies only to the specific node type
-    if (node.comfyClass !== "Bjornulf_FourImageViewer") return;
+    if (node.comfyClass !== "Emiguru_FourImageViewer") return;
 
     // Constants for layout and sizing
     const marginTop = 90; // Space at the top for node UI elements

@@ -17,7 +17,7 @@ class SaveTmpAudio:
     FUNCTION = "save_audio"
     RETURN_TYPES = ()
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def save_audio(self, audio=None, audio_path=None):
         # Ensure the output directory exists

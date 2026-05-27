@@ -29,7 +29,7 @@ function getChainNodes(startNode) {
     if (input?.link) {
       const link = app.graph.links[input.link];
       const prevNode = app.graph.getNodeById(link.origin_id);
-      if (prevNode?.comfyClass === "Bjornulf_WriteTextPickMeChain") {
+      if (prevNode?.comfyClass === "Emiguru_WriteTextPickMeChain") {
         currentNode = prevNode;
       } else {
         break;
@@ -57,7 +57,7 @@ function getChainNodes(startNode) {
       for (const linkId of output.links) {
         const link = app.graph.links[linkId];
         const targetNode = app.graph.getNodeById(link.target_id);
-        if (targetNode?.comfyClass === "Bjornulf_WriteTextPickMeChain") {
+        if (targetNode?.comfyClass === "Emiguru_WriteTextPickMeChain") {
           nextNode = targetNode;
           break;
         }
@@ -91,9 +91,9 @@ function findAndPickNext(removedNode) {
 }
 
 app.registerExtension({
-  name: "Bjornulf.WriteTextPickMeChain",
+  name: "Emiguru.WriteTextPickMeChain",
   async nodeCreated(node) {
-    if (node.comfyClass === "Bjornulf_WriteTextPickMeChain") {
+    if (node.comfyClass === "Emiguru_WriteTextPickMeChain") {
       // Store original onRemoved if it exists
       const origOnRemoved = node.onRemoved;
       // Create widgets in specific order to maintain layout

@@ -18,7 +18,7 @@ class DisplayNote:
     RETURN_TYPES = (Everything("*"),)  # Return same type as input
     RETURN_NAMES = ("any",)  # Return same type as input
     FUNCTION = "display_text_pass"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def display_text_pass(self, any, display_text):
         # Simply pass through the input

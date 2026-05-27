@@ -10,7 +10,7 @@ class LoopImages:
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "loop_images"
     OUTPUT_IS_LIST = (True,)
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def loop_images(self, number_of_images, **kwargs):
         image_list = []

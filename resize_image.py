@@ -17,7 +17,7 @@ class ResizeImage:
     FUNCTION = "resize_image"
     RETURN_TYPES = ("IMAGE",)
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def resize_image(self, image, width=256, height=256, prompt=None, extra_pnginfo=None):
         # Ensure the input image is on CPU and convert to numpy array

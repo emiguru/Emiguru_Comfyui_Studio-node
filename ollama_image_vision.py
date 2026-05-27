@@ -31,7 +31,7 @@ class OllamaImageVision:
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("response",)
     FUNCTION = "process_image"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def process_image(self, IMAGE, OLLAMA_VISION_PROMPT, answer_single_line, vram_retention_minutes, seed, OLLAMA_CONFIG=None, context=None):
         from ollama import Client
@@ -94,7 +94,7 @@ class OllamaVisionPromptSelector: #Prompts made for gemma3
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("OLLAMA_VISION_PROMPT",)
     FUNCTION = "select_prompt"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def get_prompts(self):
         """Returns a dictionary of predefined prompts for each prompt_type."""

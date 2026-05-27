@@ -18,7 +18,7 @@ class SaveImagePath:
     FUNCTION = "save_image_path"
     RETURN_TYPES = ()
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def save_image_path(self, image, path, prompt=None, extra_pnginfo=None):
         # Ensure the output directory exists

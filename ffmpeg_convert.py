@@ -21,10 +21,10 @@ class ConvertVideo:
     RETURN_NAMES = ("video_path", "ffmpeg_command",)
     FUNCTION = "convert_video"
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def __init__(self):
-        self.output_dir = Path(os.path.abspath("Bjornulf/ffmpeg/converted_videos"))
+        self.output_dir = Path(os.path.abspath("Emiguru/ffmpeg/converted_videos"))
         os.makedirs(self.output_dir, exist_ok=True)
 
     def get_default_config(self):

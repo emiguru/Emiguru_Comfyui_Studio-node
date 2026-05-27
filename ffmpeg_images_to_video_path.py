@@ -27,7 +27,7 @@ class ImagesListToVideo:
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("video_path",)
     FUNCTION = "images_to_video"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def parse_ffmpeg_config(self, config_json):
         if not config_json:
@@ -95,7 +95,7 @@ class ImagesListToVideo:
     def images_to_video(self, images, fps=30, audio_path="", audio=None, FFMPEG_CONFIG_JSON=None):
         config = self.parse_ffmpeg_config(FFMPEG_CONFIG_JSON)
         
-        output_dir = os.path.join("Bjornulf", "images_to_video")
+        output_dir = os.path.join("Emiguru", "images_to_video")
         os.makedirs(output_dir, exist_ok=True)
 
         # Determine output format from config

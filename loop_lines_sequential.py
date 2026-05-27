@@ -16,7 +16,7 @@ class LoopLinesSequential:
     RETURN_TYPES = ("STRING", "INT", "INT")  # Added INT for line number
     RETURN_NAMES = ("current_line", "remaining_cycles", "current_line_number")
     FUNCTION = "get_next_line"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     @classmethod
     def IS_CHANGED(cls, **kwargs):
@@ -28,7 +28,7 @@ class LoopLinesSequential:
         if not lines:
             raise ValueError("No valid lines found in input text")
 
-        counter_file = os.path.join("Bjornulf", "counter_lines.txt")
+        counter_file = os.path.join("Emiguru", "counter_lines.txt")
         os.makedirs(os.path.dirname(counter_file), exist_ok=True)
 
         try:
@@ -53,7 +53,7 @@ class LoopLinesSequential:
 @PromptServer.instance.routes.post("/reset_lines_counter")
 async def reset_lines_counter(request):
     logging.info("Reset lines counter called")
-    counter_file = os.path.join("Bjornulf", "counter_lines.txt")
+    counter_file = os.path.join("Emiguru", "counter_lines.txt")
     try:
         os.remove(counter_file)
         return web.json_response({"success": True}, status=200)
@@ -64,7 +64,7 @@ async def reset_lines_counter(request):
 
 @PromptServer.instance.routes.post("/increment_lines_counter")
 async def increment_lines_counter(request):
-    counter_file = os.path.join("Bjornulf", "counter_lines.txt")
+    counter_file = os.path.join("Emiguru", "counter_lines.txt")
     try:
         current_index = 0
         try:
@@ -81,7 +81,7 @@ async def increment_lines_counter(request):
 
 @PromptServer.instance.routes.post("/decrement_lines_counter")
 async def decrement_lines_counter(request):
-    counter_file = os.path.join("Bjornulf", "counter_lines.txt")
+    counter_file = os.path.join("Emiguru", "counter_lines.txt")
     try:
         current_index = 0
         try:
@@ -100,7 +100,7 @@ async def decrement_lines_counter(request):
 
 @PromptServer.instance.routes.post("/get_current_line_number")
 async def get_current_line_number(request):
-    counter_file = os.path.join("Bjornulf", "counter_lines.txt")
+    counter_file = os.path.join("Emiguru", "counter_lines.txt")
     try:
         with open(counter_file, 'r') as f:
             current_index = int(f.read().strip())

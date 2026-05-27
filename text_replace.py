@@ -28,7 +28,7 @@ class TextReplace:
     
     RETURN_TYPES = ("STRING",)
     FUNCTION = "replace_text"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def replace_text(self, input_text, search_text, replace_text, replace_count, 
                     use_regex, multiline_regex, case_sensitive, trim_whitespace):

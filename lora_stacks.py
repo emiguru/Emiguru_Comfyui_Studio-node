@@ -31,7 +31,7 @@ class AllLoraSelector:
     RETURN_TYPES = ("MODEL", "CLIP", "STRING", "STRING", "STRING")
     RETURN_NAMES = ("model", "clip", "lora_paths", "lora_names", "lora_folders")
     FUNCTION = "apply_all_loras"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def apply_all_loras(self, number_of_loras, model, clip, **kwargs):
         available_loras = []

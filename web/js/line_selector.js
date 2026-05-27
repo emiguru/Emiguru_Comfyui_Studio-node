@@ -2,9 +2,9 @@ import { app } from "../../../scripts/app.js";
 import { api } from "../../../scripts/api.js";
 
 app.registerExtension({
-  name: "Bjornulf.LineSelector",
+  name: "Emiguru.LineSelector",
   async nodeCreated(node) {
-    if (node.comfyClass !== "Bjornulf_LineSelector") return;
+    if (node.comfyClass !== "Emiguru_LineSelector") return;
 
     // Hide seed widget
     const seedWidget = node.widgets.find((w) => w.name === "seed");

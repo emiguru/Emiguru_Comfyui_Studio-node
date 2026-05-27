@@ -1,9 +1,9 @@
 import { app } from "../../../scripts/app.js";
 
 app.registerExtension({
-  name: "Bjornulf.LoadImagesFromSelectedFolder",
+  name: "Emiguru.LoadImagesFromSelectedFolder",
   async nodeCreated(node) {
-    if (node.comfyClass !== "Bjornulf_LoadImagesFromSelectedFolder") return;
+    if (node.comfyClass !== "Emiguru_LoadImagesFromSelectedFolder") return;
 
     // Add a "Refresh Folders" button
     node.addWidget(

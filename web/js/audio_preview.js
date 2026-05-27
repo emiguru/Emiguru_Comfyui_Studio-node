@@ -10,7 +10,7 @@ function displayAudioPreview(component, filename, category, autoplay, mute, loop
         const container = document.createElement("div");
 
         // Add the DOM widget to the component
-        audioWidget = component.addDOMWidget("Bjornulf", "preview", container, {
+        audioWidget = component.addDOMWidget("Emiguru", "preview", container, {
             serialize: false,
             hideOnZoom: false,
             getValue() {
@@ -60,9 +60,9 @@ function displayAudioPreview(component, filename, category, autoplay, mute, loop
 
 // Register the extension
 app.registerExtension({
-    name: "Bjornulf.AudioPreview",
+    name: "Emiguru.AudioPreview",
     async beforeRegisterNodeDef(nodeType, nodeData, appInstance) {
-        if (nodeData?.name === "Bjornulf_AudioPreview") {
+        if (nodeData?.name === "Emiguru_AudioPreview") {
             // Define behavior when the node executes
             nodeType.prototype.onExecuted = function(data) {
                 const autoplay = this.widgets.find(w => w.name === "autoplay")?.value ?? false;

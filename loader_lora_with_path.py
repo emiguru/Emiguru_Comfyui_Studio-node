@@ -19,7 +19,7 @@ class LoaderLoraWithPath:
     
     RETURN_TYPES = ("MODEL", "CLIP", "STRING")
     FUNCTION = "load_lora"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def load_lora(self, model, lora_path, strength_model, strength_clip, clip=None):
         try:

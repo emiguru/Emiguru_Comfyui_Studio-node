@@ -39,7 +39,7 @@ class LoadImagesFromSelectedFolder:
     RETURN_TYPES = ("IMAGE", "IMAGE", "IMAGE", "IMAGE")
     RETURN_NAMES = ("Images resolution 1", "Images resolution 2", "Images resolution 3", "Images resolution 4")
     FUNCTION = "load_images_from_selected_folder"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def load_images_from_selected_folder(self, selected_folder):
         script_dir = os.path.dirname(os.path.abspath(__file__))

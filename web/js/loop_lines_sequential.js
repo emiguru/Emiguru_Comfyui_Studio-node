@@ -2,9 +2,9 @@ import { app } from "../../../scripts/app.js";
 import { api } from "../../../scripts/api.js";
 
 app.registerExtension({
-  name: "Bjornulf.LoopLinesSequential",
+  name: "Emiguru.LoopLinesSequential",
   async nodeCreated(node) {
-    if (node.comfyClass !== "Bjornulf_LoopLinesSequential") return;
+    if (node.comfyClass !== "Emiguru_LoopLinesSequential") return;
 
     // Hide seed widget
     const seedWidget = node.widgets.find((w) => w.name === "seed");

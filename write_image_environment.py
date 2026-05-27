@@ -17,7 +17,7 @@ class WriteImageEnvironment:
     RETURN_NAMES = ("text",)
     FUNCTION = "write_image_environment"
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def write_image_environment(self, art_style, location, lighting, camera_angle, **kwargs):
         text = f"Art Style: {art_style}\n\n"

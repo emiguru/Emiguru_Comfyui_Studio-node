@@ -1,9 +1,9 @@
 import { app } from "../../../scripts/app.js";
 
 app.registerExtension({
-    name: "Bjornulf.CustomStringType",
+    name: "Emiguru.CustomStringType",
     async beforeRegisterNodeDef(nodeType, nodeData, app) {
-        if (nodeData.name === "Bjornulf_WriteImageAllInOne") {
+        if (nodeData.name === "Emiguru_WriteImageAllInOne") {
             const onNodeCreated = nodeType.prototype.onNodeCreated;
             nodeType.prototype.onNodeCreated = function () {
                 onNodeCreated?.apply(this, arguments);

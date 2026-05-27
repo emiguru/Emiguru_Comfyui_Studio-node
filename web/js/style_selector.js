@@ -2,10 +2,10 @@
 // import { app } from "../../../scripts/app.js";
 
 // app.registerExtension({
-//   name: "Bjornulf.StyleSelector",
+//   name: "Emiguru.StyleSelector",
 //   async nodeCreated(node) {
-//     // Only apply to the Bjornulf_StyleSelector node
-//     if (node.comfyClass !== "Bjornulf_StyleSelector") return;
+//     // Only apply to the Emiguru_StyleSelector node
+//     if (node.comfyClass !== "Emiguru_StyleSelector") return;
 
 //     // Find the widgets for LOOP_random_LIST and LOOP_style_LIST
 //     const loopRandomWidget = node.widgets.find(w => w.name === "LOOP_random_LIST");
@@ -13,7 +13,7 @@
 
 //     // Check if widgets exist to avoid errors
 //     if (!loopRandomWidget || !loopStyleWidget) {
-//       console.error("LOOP widgets not found in Bjornulf_StyleSelector node.");
+//       console.error("LOOP widgets not found in Emiguru_StyleSelector node.");
 //       return;
 //     }
 
@@ -93,9 +93,9 @@
 import { app } from "../../../scripts/app.js";
 
 app.registerExtension({
-  name: "Bjornulf.StyleSelector",
+  name: "Emiguru.StyleSelector",
   async nodeCreated(node) {
-    if (node.comfyClass !== "Bjornulf_StyleSelector") return;
+    if (node.comfyClass !== "Emiguru_StyleSelector") return;
 
     // Find loop widgets
     const loopRandomWidget = node.widgets.find(w => w.name === "LOOP_random_LIST");

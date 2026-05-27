@@ -28,7 +28,7 @@ class TextAnalyzer:
     RETURN_NAMES = ("number_lines", "number_words", "number_characters", "language", "sentiment", "sentiment_polarity", "type", "character", "sentence", "subject", "action", "target")
 
     FUNCTION = "analyze"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def analyze(self, text):
         from langdetect import detect

@@ -1,9 +1,9 @@
 import { app } from "../../../scripts/app.js";
 
 app.registerExtension({
-    name: "Bjornulf.RandomImage",
+    name: "Emiguru.RandomImage",
     async nodeCreated(node) {
-        if (node.comfyClass === "Bjornulf_RandomImage") {
+        if (node.comfyClass === "Emiguru_RandomImage") {
             const updateInputs = () => {
                 const initialWidth = node.size[0];
                 const numInputsWidget = node.widgets.find(w => w.name === "number_of_images");

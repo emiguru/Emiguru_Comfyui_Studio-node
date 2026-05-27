@@ -13,7 +13,7 @@ class ImageMaskCutter:
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "cut_image"
 
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def cut_image(self, image, mask):
         print(f"Image shape: {image.shape}")

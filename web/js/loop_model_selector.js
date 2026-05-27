@@ -1,9 +1,9 @@
 import { app } from "../../../scripts/app.js";
 
 app.registerExtension({
-    name: "Bjornulf.LoopModelSelector",
+    name: "Emiguru.LoopModelSelector",
     async nodeCreated(node) {
-        if (node.comfyClass === "Bjornulf_LoopModelSelector") {
+        if (node.comfyClass === "Emiguru_LoopModelSelector") {
             node.properties = node.properties || {};
 
             const updateModelInputs = () => {

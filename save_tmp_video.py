@@ -13,7 +13,7 @@ class SaveTmpVideo:
     FUNCTION = "save_video"
     RETURN_TYPES = ()
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def save_video(self, video_path):
         # Ensure the output directory exists

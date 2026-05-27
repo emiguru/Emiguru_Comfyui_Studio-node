@@ -20,9 +20,9 @@ const textAreaStyles = {
 
 // Displays input text on a node
 app.registerExtension({
-    name: "Bjornulf.ShowText",
+    name: "Emiguru.ShowText",
     async beforeRegisterNodeDef(nodeType, nodeData, app) {
-        if (nodeData.name === "Bjornulf_ShowText") {
+        if (nodeData.name === "Emiguru_ShowText") {
             function populate(text) {
                 if (!Array.isArray(text)) {
                     console.warn("populate expects an array, got:", text);

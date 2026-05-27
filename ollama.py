@@ -90,7 +90,7 @@ class ollamaLoader:
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("ollama_response",)
     FUNCTION = "connect_2_ollama"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def __init__(self):
         self.last_content_hash = None

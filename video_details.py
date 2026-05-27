@@ -27,7 +27,7 @@ class VideoDetails:
                    "audio_codec", "audio_bitrate", "container_format",
                    "duration_seconds_float", "full_info", "FFMPEG_CONFIG_JSON")
     FUNCTION = "get_video_info"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def extract_bitrate(self, text):
         """Extract bitrate value from text."""

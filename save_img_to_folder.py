@@ -14,7 +14,7 @@ class SaveImageToFolder(SaveImage):
         }
 
     FUNCTION = "save_images"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     OUTPUT_NODE = True
 
     def save_images(self, images, folder_name, prompt=None, extra_pnginfo=None):

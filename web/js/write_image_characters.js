@@ -1,9 +1,9 @@
 import { app } from "../../../scripts/app.js";
 
 app.registerExtension({
-    name: "Bjornulf.WriteImageCharacters",
+    name: "Emiguru.WriteImageCharacters",
     async nodeCreated(node) {
-        if (node.comfyClass === "Bjornulf_WriteImageCharacters") {
+        if (node.comfyClass === "Emiguru_WriteImageCharacters") {
             const updateInputs = () => {
                 const numInputsWidget = node.widgets.find(w => w.name === "number_of_characters");
                 if (!numInputsWidget) return;
@@ -25,7 +25,7 @@ app.registerExtension({
                         const inputName = `character_${i}`;
                         if (!node.inputs.find(input => input.name === inputName)) {
                             // node.addInput(inputName, "STRING");
-                            node.addInput(inputName, "BJORNULF_CHARACTER");
+                            node.addInput(inputName, "Emiguru_CHARACTER");
                         }
                     }
                 } else {

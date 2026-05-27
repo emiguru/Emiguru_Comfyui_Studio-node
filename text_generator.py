@@ -1731,7 +1731,7 @@ class TextGeneratorOutfitFemale:
     RETURN_TYPES = ("GEN_OUTFIT,STRING",)
     RETURN_NAMES = ("GEN_OUTFIT",)
     FUNCTION = "generate"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def select_value(self, options, current_value, rng):
         if current_value == "RANDOM":
@@ -1890,7 +1890,7 @@ class TextGeneratorOutfitMale:
     RETURN_TYPES = ("GEN_OUTFIT,STRING",)
     RETURN_NAMES = ("GEN_OUTFIT",)
     FUNCTION = "generate"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def select_value(self, options, current_value, rng):
         if current_value == "RANDOM":
@@ -2077,7 +2077,7 @@ class TextGeneratorCharacterFemale:
     RETURN_TYPES = ("GEN_CHARACTER,STRING",)
     RETURN_NAMES = ("GEN_CHARACTER",)
     FUNCTION = "generate"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def select_value(self, options, current_value, rng):
         if current_value == "RANDOM":
@@ -2222,7 +2222,7 @@ class TextGeneratorCharacterMale:
     RETURN_TYPES = ("GEN_CHARACTER,STRING",)
     RETURN_NAMES = ("GEN_CHARACTER",)
     FUNCTION = "generate"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def select_value(self, options, current_value, rng):
         if current_value == "RANDOM":
@@ -2364,7 +2364,7 @@ class TextGeneratorStyle:
     RETURN_TYPES = ("GEN_STYLE,STRING",)
     RETURN_NAMES = ("GEN_STYLE",)
     FUNCTION = "generate"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def select_random_element(self, available_options, selected_value, random_generator):
         if selected_value == "RANDOM":
@@ -2420,7 +2420,7 @@ class TextGeneratorScene:
     RETURN_TYPES = ("GEN_SCENE,STRING",)
     RETURN_NAMES = ("GEN_SCENE",)
     FUNCTION = "generate"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def select_random_element(self, available_options, selected_value, random_generator):
         if selected_value == "RANDOM":
@@ -2478,7 +2478,7 @@ class TextGenerator:
 
     RETURN_TYPES = ("STRING",)
     FUNCTION = "generate"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def select_random_element(self, options, current_value, random_generator):
         if current_value == "RANDOM":
@@ -2593,7 +2593,7 @@ class ListLooperOutfitMale:
     RETURN_TYPES = (Everything("*"),)
     FUNCTION = "get_list"
     OUTPUT_IS_LIST = (True,)
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def get_list(self, SELECTION, top, bottom, footwear, head_item, eye_item, mouth_item,
                  accessories, armors, uniforms, material, pattern, style_details, 
@@ -2665,7 +2665,7 @@ class ListLooperOutfitFemale:
     RETURN_TYPES = (Everything("*"),)
     FUNCTION = "get_list"
     OUTPUT_IS_LIST = (True,)
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def get_list(self, SELECTION, top, bottom, dress, full_body, footwear, head_item, 
                  eye_item, mouth_item, accessories, armors, uniforms, material, pattern, 
@@ -2754,7 +2754,7 @@ class ListLooperCharacter:
     RETURN_TYPES = (Everything("*"),)
     FUNCTION = "get_list"
     OUTPUT_IS_LIST = (True,)
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def get_list(self, SELECTION, location_on_image, ethnicity, nationality, 
                  age_male, age_female, body_shape_female, body_shape_male, skin_tone, eye_color, 
@@ -2824,7 +2824,7 @@ class ListLooperStyle:
     RETURN_TYPES = (Everything("*"),)
     FUNCTION = "get_list"
     OUTPUT_IS_LIST = (True,)
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def get_list(self, SELECTION, artistic_style, color_palette, 
                  lighting_type, mood, composition):
@@ -2875,7 +2875,7 @@ class ListLooperPose:
     RETURN_TYPES = (Everything("*"),)
     FUNCTION = "get_list"
     OUTPUT_IS_LIST = (True,)
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def get_list(self, SELECTION, pose_view, pose_camera, pose_face, 
                  pose_arms, pose_legs, pose_body, pose_head_neck, 
@@ -2915,7 +2915,7 @@ class ListLooperScene:
     RETURN_TYPES = (Everything("*"),)
     FUNCTION = "get_list"
     OUTPUT_IS_LIST = (True,)
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def get_list(self, SELECTION, scene_type, time_period, weather_condition, ambiance, setting):
         selection_map = {
@@ -2944,7 +2944,7 @@ class ListLooper:
     RETURN_TYPES = (Everything("*"),)
     FUNCTION = "get_list"
     OUTPUT_IS_LIST = (True,)
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def get_list(self, SELECTION, camera_angle, shot_type, lighting, multi_char_action):
         selection_map = {
@@ -2985,7 +2985,7 @@ class TextGeneratorCharacterPose:
     RETURN_TYPES = ("GEN_POSE,STRING",)
     RETURN_NAMES = ("GEN_POSE",)
     FUNCTION = "generate"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def select_value(self, options, current_value, rng):
         if current_value == "RANDOM":
@@ -3064,7 +3064,7 @@ class TextGeneratorCharacterObject:
     RETURN_TYPES = ("GEN_OBJECT,STRING",)
     RETURN_NAMES = ("GEN_OBJECT",)
     FUNCTION = "generate"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def generate(self, object_selection, custom_object, CUSTOM_PROMPT_PREFIX, CUSTOM_PROMPT_SUFFIX, add_GEN_OBJECT=None):
         # Handle the current object
@@ -3114,7 +3114,7 @@ class TextGeneratorCharacterCreature:
     RETURN_TYPES = ("GEN_CHARACTER,STRING",)
     RETURN_NAMES = ("GEN_CHARACTER",)
     FUNCTION = "generate"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def select_value(self, options, current_value, rng):
         if current_value == "RANDOM":

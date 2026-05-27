@@ -13,7 +13,7 @@ class GrayscaleTransform:
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "transform_to_grayscale"
 
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def transform_to_grayscale(self, image, preserve_alpha):
         # Check if the image has an alpha channel

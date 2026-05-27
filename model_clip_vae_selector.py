@@ -41,7 +41,7 @@ class ModelClipVaeSelector:
     RETURN_NAMES = ("model", "clip", "vae", "current_selection")
     OUTPUT_IS_LIST = (True, True, True, False)  # Allow lists for model/clip/vae outputs
     FUNCTION = "select_models"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def select_models(self, number_of_inputs, selected_number, RANDOM, LOOP, LOOP_SEQUENTIAL, jump, **kwargs):
         if LOOP:
@@ -52,7 +52,7 @@ class ModelClipVaeSelector:
             return (models, clips, vaes, 0)
             
         if LOOP_SEQUENTIAL:
-            counter_file = os.path.join("Bjornulf", "model_selector_counter.txt")
+            counter_file = os.path.join("Emiguru", "model_selector_counter.txt")
             os.makedirs(os.path.dirname(counter_file), exist_ok=True)
 
             try:
@@ -93,7 +93,7 @@ class ModelClipVaeSelector:
 # Add routes for counter management
 @PromptServer.instance.routes.post("/reset_model_selector_counter")
 async def reset_model_selector_counter(request):
-    counter_file = os.path.join("Bjornulf", "model_selector_counter.txt")
+    counter_file = os.path.join("Emiguru", "model_selector_counter.txt")
     try:
         os.remove(counter_file)
         return web.json_response({"success": True}, status=200)
@@ -104,7 +104,7 @@ async def reset_model_selector_counter(request):
 
 @PromptServer.instance.routes.post("/get_model_selector_counter")
 async def get_model_selector_counter(request):
-    counter_file = os.path.join("Bjornulf", "model_selector_counter.txt")
+    counter_file = os.path.join("Emiguru", "model_selector_counter.txt")
     try:
         with open(counter_file, 'r') as f:
             current_index = int(f.read().strip())

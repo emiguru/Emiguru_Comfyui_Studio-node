@@ -14,7 +14,7 @@ class LoopSchedulers:
     RETURN_NAMES = ("scheduler",)
     OUTPUT_IS_LIST = (True,)
     FUNCTION = "create_loop_scheduler"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def create_loop_scheduler(self, scheduler):
         if scheduler == "ALL SCHEDULERS":

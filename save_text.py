@@ -6,7 +6,7 @@ class SaveText:
         return {
             "required": {
                 "text": ("STRING", {"multiline": True, "forceInput": True}),
-                "filepath": ("STRING", {"default": "Bjornulf/Text/example.txt"}),
+                "filepath": ("STRING", {"default": "Emiguru/Text/example.txt"}),
             }
         }
 
@@ -14,7 +14,7 @@ class SaveText:
     RETURN_NAMES = ("added_text", "complete_text", "filename", "full_path")
     FUNCTION = "save_text"
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def save_text(self, text, filepath):
         # Validate file extension

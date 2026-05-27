@@ -29,7 +29,7 @@ class WriteTextAdvanced:
     RETURN_NAMES = ("text",)
     FUNCTION = "write_text_special"
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def find_variables(self, text):
         """Identify nested curly brace sections in the text."""

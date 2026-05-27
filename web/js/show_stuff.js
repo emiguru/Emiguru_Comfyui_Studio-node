@@ -19,9 +19,9 @@ const textStyles = {
 };
 
 app.registerExtension({
-  name: "Bjornulf.ShowStringText",
+  name: "Emiguru.ShowStringText",
   async beforeRegisterNodeDef(nodeType, nodeData, app) {
-    if (nodeData.name === "Bjornulf_ShowStringText") {
+    if (nodeData.name === "Emiguru_ShowStringText") {
       function populate(text) {
         if (!Array.isArray(text)) {
           console.warn("populate expects an array, got:", text);
@@ -93,9 +93,9 @@ app.registerExtension({
 });
 
 app.registerExtension({
-  name: "Bjornulf.ShowJson",
+  name: "Emiguru.ShowJson",
   async beforeRegisterNodeDef(nodeType, nodeData, app) {
-    if (nodeData.name === "Bjornulf_ShowJson") {
+    if (nodeData.name === "Emiguru_ShowJson") {
       function populate(text) {
         if (!Array.isArray(text)) {
           console.warn("populate expects an array, got:", text);
@@ -167,9 +167,9 @@ app.registerExtension({
 });
 
 app.registerExtension({
-  name: "Bjornulf.ShowInt",
+  name: "Emiguru.ShowInt",
   async beforeRegisterNodeDef(nodeType, nodeData, app) {
-    if (nodeData.name === "Bjornulf_ShowInt") {
+    if (nodeData.name === "Emiguru_ShowInt") {
       function populate(text) {
         if (!Array.isArray(text)) {
           console.warn("populate expects an array, got:", text);
@@ -239,9 +239,9 @@ app.registerExtension({
 });
 
 app.registerExtension({
-  name: "Bjornulf.ShowFloat",
+  name: "Emiguru.ShowFloat",
   async beforeRegisterNodeDef(nodeType, nodeData, app) {
-    if (nodeData.name === "Bjornulf_ShowFloat") {
+    if (nodeData.name === "Emiguru_ShowFloat") {
       function populate(text) {
         if (!Array.isArray(text)) {
           console.warn("populate expects an array, got:", text);
@@ -310,9 +310,9 @@ app.registerExtension({
 });
 
 // app.registerExtension({
-//     name: "Bjornulf.ShowJson",
+//     name: "Emiguru.ShowJson",
 //     async beforeRegisterNodeDef(nodeType, nodeData, app) {
-//         if (nodeData.name === "Bjornulf_ShowJson") {
+//         if (nodeData.name === "Emiguru_ShowJson") {
 //             function populate(text) {
 //                 if (!Array.isArray(text)) {
 //                     console.warn("populate expects an array, got:", text);

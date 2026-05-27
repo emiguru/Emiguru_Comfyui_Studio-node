@@ -12,7 +12,7 @@ VAR_PATTERN = re.compile(r'^([a-zA-Z_][a-zA-Z0-9_]*)\s*=\s*(.+)$')
 
 class SaveGlobalVariables:
     def __init__(self):
-        self.base_dir = os.path.join(folder_paths.base_path, 'Bjornulf')
+        self.base_dir = os.path.join(folder_paths.base_path, 'Emiguru')
         self.global_vars_dir = os.path.join(self.base_dir, 'GlobalVariables')
         os.makedirs(self.global_vars_dir, exist_ok=True)
 
@@ -32,7 +32,7 @@ class SaveGlobalVariables:
     RETURN_NAMES = ("connect_to_workflow",)
     FUNCTION = "save_variables"
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def save_variables(self, variables, mode, filename=""):
         # Determine target file path
@@ -97,7 +97,7 @@ class SaveGlobalVariables:
 
 class LoadGlobalVariables:
     def __init__(self):
-        self.base_dir = os.path.join(folder_paths.base_path, 'Bjornulf')
+        self.base_dir = os.path.join(folder_paths.base_path, 'Emiguru')
         self.global_vars_dir = os.path.join(self.base_dir, 'GlobalVariables')
         os.makedirs(self.global_vars_dir, exist_ok=True)
 
@@ -125,11 +125,11 @@ class LoadGlobalVariables:
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("variables",)
     FUNCTION = "load_variables"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     @classmethod
     def global_vars_dir(cls):
-        return os.path.join(folder_paths.base_path, 'Bjornulf', 'GlobalVariables')
+        return os.path.join(folder_paths.base_path, 'Emiguru', 'GlobalVariables')
 
     def load_variables(self, seed, connect_to_workflow="", filename="", file_list="default"):
         # First check if filename is provided and not empty

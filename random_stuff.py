@@ -12,7 +12,7 @@ class RandomIntNode:
 
     RETURN_TYPES = ("INT", "STRING")
     FUNCTION = "generate_random_int"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def generate_random_int(self, min_value: int, max_value: int, seed: int) -> Tuple[int, str]:
         rand_int = random.randint(min_value, max_value)
@@ -30,7 +30,7 @@ class RandomFloatNode:
 
     RETURN_TYPES = ("FLOAT", "STRING")
     FUNCTION = "generate_random_float"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def generate_random_float(self, min_value: float, max_value: float, seed: int) -> Tuple[float, str]:
         rand_float = round(random.uniform(min_value, max_value), 2)

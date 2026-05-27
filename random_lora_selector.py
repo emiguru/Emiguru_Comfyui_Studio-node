@@ -33,7 +33,7 @@ class RandomLoraSelector:
     RETURN_TYPES = ("MODEL", "CLIP", "STRING", "STRING", "STRING")
     RETURN_NAMES = ("model", "clip", "lora_path", "lora_name", "lora_folder")
     FUNCTION = "random_select_lora"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def random_select_lora(self, number_of_loras, model, clip, strength_model, strength_clip, seed, **kwargs):
         random.seed(seed)

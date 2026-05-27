@@ -30,7 +30,7 @@ class PauseResume:
     RETURN_TYPES = (Everything("*"),)
     RETURN_NAMES = ("output",)
     FUNCTION = "loop_resume_or_stop"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def play_audio(self):
         # Check if the operating system is Windows
@@ -75,13 +75,13 @@ class PauseResume:
         PauseResume.should_stop = False
         return (self.input,)
 
-@PromptServer.instance.routes.get("/bjornulf_resume")
+@PromptServer.instance.routes.get("/emiguru_resume")
 async def resume_node(request):
     # logging.info("Resume node called")
     PauseResume.is_paused = False
     return web.Response(text="Node resumed")
 
-@PromptServer.instance.routes.get("/bjornulf_stop")
+@PromptServer.instance.routes.get("/emiguru_stop")
 async def stop_node(request):
     # logging.info("Stop node called")
     PauseResume.should_stop = True

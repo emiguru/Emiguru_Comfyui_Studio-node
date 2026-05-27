@@ -12,7 +12,7 @@ from aiohttp import web
 class ImageNote:
     def __init__(self):
         # Directory to store notes, created if it doesn’t exist
-        self.note_dir = os.path.join("ComfyUI", "Bjornulf", "imageNote")
+        self.note_dir = os.path.join("ComfyUI", "Emiguru", "imageNote")
         os.makedirs(self.note_dir, exist_ok=True)
 
     @classmethod
@@ -36,7 +36,7 @@ class ImageNote:
     RETURN_NAMES = ("image_path", "note")
     FUNCTION = "process_image"
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def compute_md5(self, image):
         """Compute MD5 hash of an image for note association."""
@@ -125,13 +125,13 @@ class ImageNote:
 
 class ImageNoteLoadImage:
     def __init__(self):
-        self.note_dir = os.path.join("ComfyUI", "Bjornulf", "imageNote")
+        self.note_dir = os.path.join("ComfyUI", "Emiguru", "imageNote")
         os.makedirs(self.note_dir, exist_ok=True)
 
     @classmethod
     def INPUT_TYPES(s):
         base_input_dir = folder_paths.get_input_directory()
-        input_dir = os.path.join(base_input_dir, "Bjornulf", "imagenote_images")
+        input_dir = os.path.join(base_input_dir, "Emiguru", "imagenote_images")
         if not os.path.exists(input_dir):
             os.makedirs(input_dir, exist_ok=True)
         valid_extensions = ('.png', '.jpg', '.jpeg', '.gif', '.bmp', '.webp')
@@ -152,7 +152,7 @@ class ImageNoteLoadImage:
     RETURN_TYPES = ("IMAGE", "MASK", "STRING", "STRING")
     RETURN_NAMES = ("image", "mask", "image_path", "note")
     FUNCTION = "load_image_alpha"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def compute_md5(self, image):
         """Compute MD5 hash of an image for note association."""

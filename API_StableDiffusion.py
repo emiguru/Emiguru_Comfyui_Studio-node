@@ -47,7 +47,7 @@ class APIGenerateStability:
 
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "generate"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def get_next_number(self):
         save_dir = "output/API/Stability"

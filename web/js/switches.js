@@ -1,9 +1,9 @@
 import { app } from "/scripts/app.js";  // Adjust path based on ComfyUI's structure
 
 app.registerExtension({
-    name: "Bjornulf.SwitchText",
+    name: "Emiguru.SwitchText",
     async nodeCreated(node) {
-        if (node.comfyClass === "Bjornulf_SwitchText") {
+        if (node.comfyClass === "Emiguru_SwitchText") {
             // Store original colors
             const originalColor = "";  // Default ComfyUI node color
             
@@ -54,9 +54,9 @@ app.registerExtension({
 });
 
 app.registerExtension({
-    name: "Bjornulf.SwitchAnything",
+    name: "Emiguru.SwitchAnything",
     async nodeCreated(node) {
-        if (node.comfyClass === "Bjornulf_SwitchAnything") {
+        if (node.comfyClass === "Emiguru_SwitchAnything") {
             // Store original colors
             const originalColor = "";  // Default ComfyUI node color
             

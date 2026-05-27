@@ -19,7 +19,7 @@ class LoopBasicBatch:
     RETURN_NAMES = ("output",)
     OUTPUT_IS_LIST = (True,)
     FUNCTION = "create_loop_basic_batch"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def create_loop_basic_batch(self, nb_loops, default_text, input=None):
         if input is not None:

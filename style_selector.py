@@ -61,8 +61,8 @@ BRANCHES_MODELS = {
 MODELS = {model_name: (urn, link) for category in BRANCHES_MODELS for model_name, urn, link in BRANCHES_MODELS[category]}
 
 # Counter files
-STYLE_LIST_COUNTER_FILE = os.path.join("Bjornulf", "style_list_counter.txt")
-MODEL_LIST_COUNTER_FILE = os.path.join("Bjornulf", "model_list_counter.txt")
+STYLE_LIST_COUNTER_FILE = os.path.join("Emiguru", "style_list_counter.txt")
+MODEL_LIST_COUNTER_FILE = os.path.join("Emiguru", "model_list_counter.txt")
 
 class StyleSelector:
     @classmethod
@@ -91,7 +91,7 @@ class StyleSelector:
     )
     OUTPUT_IS_LIST = (False, True, False, True)
     FUNCTION = "select_style"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def format_style(self, s, descriptor, model=None):
         """Helper function to format a style string."""
@@ -259,7 +259,7 @@ async def get_model_list_counter(request):
 #     )
 #     OUTPUT_IS_LIST = (False, True, False, True)  # Updated: third element is now False
 #     FUNCTION = "select_style"
-#     CATEGORY = "Bjornulf"
+#     CATEGORY = "Emiguru"
 
 #     def select_style(self, category, style, seed, LOOP_random_LIST, LOOP_style_LIST, model=None):
 #         DESCRIPTORS = {

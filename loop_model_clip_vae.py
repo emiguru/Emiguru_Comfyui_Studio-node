@@ -21,7 +21,7 @@ class LoopModelClipVae:
     RETURN_TYPES = ("MODEL", "CLIP", "VAE")
     FUNCTION = "return_all"
     OUTPUT_IS_LIST = (True, True, True)
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def return_all(self, number_of_inputs, **kwargs):
         models = [kwargs[f"model_{i}"] for i in range(1, number_of_inputs + 1) if f"model_{i}" in kwargs]

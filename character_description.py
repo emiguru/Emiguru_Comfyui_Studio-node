@@ -22,7 +22,7 @@ class CharacterDescriptionGenerator:
     RETURN_TYPES = ("STRING", "STRING", "STRING")
     RETURN_NAMES = ("sentences", "words", "name")
     FUNCTION = "generate_descriptions"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def generate_descriptions(self, character_file):
         current_dir = os.path.dirname(os.path.realpath(__file__))

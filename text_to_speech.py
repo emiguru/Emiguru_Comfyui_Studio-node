@@ -48,7 +48,7 @@ class XTTSConfig:
     RETURN_TYPES = ("TTS_URL", "TTS_LANGUAGE", "TTS_SPEAKER")
     RETURN_NAMES = ("TTS_URL", "TTS_LANGUAGE", "TTS_SPEAKER")
     FUNCTION = "configure_xtts"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def configure_xtts(self, TTS_url, language, speaker_wav):
         return (TTS_url, language, speaker_wav)
@@ -81,7 +81,7 @@ class TextToSpeech:
     RETURN_TYPES = ("AUDIO", "STRING", "STRING", "FLOAT")
     RETURN_NAMES = ("AUDIO", "audio_path", "audio_full_path", "audio_duration")
     FUNCTION = "generate_audio"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     @staticmethod
     def get_language_code(language_name: str) -> str:
@@ -184,7 +184,7 @@ class TextToSpeech:
             speaker_wav = config["speaker_wav"]
             
             sanitized_text = self.sanitize_text(text)
-            save_path = os.path.join("Bjornulf_TTS", config["language"], speaker_wav, f"{sanitized_text}.wav")
+            save_path = os.path.join("Emiguru_TTS", config["language"], speaker_wav, f"{sanitized_text}.wav")
             full_path = os.path.abspath(save_path)
             os.makedirs(os.path.dirname(full_path), exist_ok=True)
 
@@ -200,10 +200,10 @@ class TextToSpeech:
             return (audio_output, save_path, full_path, duration)
 
 # Scan folder
-@PromptServer.instance.routes.post("/bjornulf_TTS_get_voices")
+@PromptServer.instance.routes.post("/emiguru_TTS_get_voices")
 async def get_voices(request):
     try:
-        base_path = os.path.join("custom_nodes", "Bjornulf_custom_nodes", "speakers")
+        base_path = os.path.join("custom_nodes", "Emiguru_custom_nodes", "speakers")
         voices_by_language = {}
         
         # Scan each language directory

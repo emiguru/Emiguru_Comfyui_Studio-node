@@ -1,14 +1,14 @@
 [project]
-name = "bjornulf_custom_nodes"
+name = "Emiguru_custom_nodes"
 description = "170 ComfyUI nodes : Display, manipulate, and edit text, images, videos, loras, generate characters and more. Manage looping operations, generate randomized content, use logical conditions and work with external AI tools, like Ollama or Text To Speech, etc..."
 version = "1.1.8"
 license = {file = "LICENSE"}
 
 [project.urls]
-Repository = "https://github.com/justUmen/Bjornulf_custom_nodes"
+Repository = "https://github.com/justUmen/Emiguru_custom_nodes"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = "bjornulf"
-DisplayName = "Bjornulf_custom_nodes"
+PublisherId = "Emiguru"
+DisplayName = "Emiguru_custom_nodes"
 Icon = ""

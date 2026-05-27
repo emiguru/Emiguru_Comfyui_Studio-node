@@ -16,7 +16,7 @@ class ImageDetails:
     RETURN_NAMES = ("WIDTH", "HEIGHT", "HAS_TRANSPARENCY", "ORIENTATION", "TYPE", "ALL")
     FUNCTION = "show_image_details"
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def show_image_details(self, image_input):
         if isinstance(image_input, torch.Tensor):

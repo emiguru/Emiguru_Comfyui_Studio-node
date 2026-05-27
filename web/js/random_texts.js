@@ -1,9 +1,9 @@
 import { app } from "../../../scripts/app.js";
 
 app.registerExtension({
-    name: "Bjornulf.RandomTexts",
+    name: "Emiguru.RandomTexts",
     async nodeCreated(node) {
-        if (node.comfyClass === "Bjornulf_RandomTexts") {
+        if (node.comfyClass === "Emiguru_RandomTexts") {
             const updateInputs = () => {
                 const numInputsWidget = node.widgets.find(w => w.name === "number_of_inputs");
                 if (!numInputsWidget) return;

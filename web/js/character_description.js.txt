@@ -1,13 +1,13 @@
 import { app } from "../../../scripts/app.js";
 
-console.log("Bjornulf.CharacterDescriptionGenerator extension loaded");
+console.log("Emiguru.CharacterDescriptionGenerator extension loaded");
 
 app.registerExtension({
-    name: "Bjornulf.CharacterDescriptionGenerator",
+    name: "Emiguru.CharacterDescriptionGenerator",
     async nodeCreated(node) {
         console.log("nodeCreated called for", node.comfyClass);
-        if (node.comfyClass === "Bjornulf_CharacterDescriptionGenerator") {
-            console.log("Creating custom UI for Bjornulf_CharacterDescriptionGenerator");
+        if (node.comfyClass === "Emiguru_CharacterDescriptionGenerator") {
+            console.log("Creating custom UI for Emiguru_CharacterDescriptionGenerator");
             
             // Create a simple text element instead of an image
             const textElement = document.createElement("div");

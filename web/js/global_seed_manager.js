@@ -2,10 +2,10 @@ import { app } from "../../../scripts/app.js";
 import { api } from "../../../scripts/api.js";
 
 app.registerExtension({
-  name: "Bjornulf.GlobalSeedManager",
+  name: "Emiguru.GlobalSeedManager",
   async nodeCreated(node) {
     // Ensure the button is added only to RandomSeedNode
-    if (node.comfyClass !== "Bjornulf_GlobalSeedManager") return;
+    if (node.comfyClass !== "Emiguru_GlobalSeedManager") return;
 
     // Add a button widget to the node
     const deleteButton = node.addWidget(

@@ -11,11 +11,11 @@ class WriteImageCharacter:
         }
 
     # RETURN_TYPES = ("STRING",)
-    RETURN_TYPES = ("BJORNULF_CHARACTER",)
+    RETURN_TYPES = ("Emiguru_CHARACTER",)
     RETURN_NAMES = ("character_details",)
     FUNCTION = "write_image_character"
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def write_image_character(self, description, action, emotion, clothes):
         text = f"{description}, {action}, {emotion}, {clothes}"

@@ -1,9 +1,9 @@
 import { app } from "../../../scripts/app.js";
 
 app.registerExtension({
-    name: "Bjornulf.ConcatVideos",
+    name: "Emiguru.ConcatVideos",
     async nodeCreated(node) {
-        if (node.comfyClass === "Bjornulf_ConcatVideos") {
+        if (node.comfyClass === "Emiguru_ConcatVideos") {
             // Initialize properties if not already set
             node.properties = node.properties || {};
 

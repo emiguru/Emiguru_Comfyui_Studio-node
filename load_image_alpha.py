@@ -18,7 +18,7 @@ class LoadImageWithTransparency:
     RETURN_TYPES = ("IMAGE", "MASK", "STRING")  # Added "STRING" for the image path
     RETURN_NAMES = ("image", "mask", "image_path")
     FUNCTION = "load_image_alpha"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def load_image_alpha(self, image):
         image_path = folder_paths.get_annotated_filepath(image)

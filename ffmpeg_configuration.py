@@ -87,7 +87,7 @@ class FFmpegConfig:
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("FFMPEG_CONFIG_JSON",)
     FUNCTION = "create_config"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def get_ffmpeg_version(self, ffmpeg_path):
         try:

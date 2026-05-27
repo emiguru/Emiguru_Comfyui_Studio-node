@@ -18,7 +18,7 @@ class LoopWriteText:
     FUNCTION = "loop_write_text"
     OUTPUT_NODE = True
     OUTPUT_IS_LIST = (True,)
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def loop_write_text(self, text, variables=""):
         # Parse variables

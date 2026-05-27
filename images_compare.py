@@ -4,7 +4,7 @@ class FourImageViewer(PreviewImage):
     """A node that compares four images in the UI."""
 
     NAME = 'Four Image Comparer'
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     FUNCTION = "compare_images"
 
     @classmethod

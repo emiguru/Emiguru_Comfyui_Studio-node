@@ -1,9 +1,9 @@
 import { app } from "../../../scripts/app.js";
 
 app.registerExtension({
-  name: "Bjornulf.LoadTextFromFolder",
+  name: "Emiguru.LoadTextFromFolder",
   async nodeCreated(node) {
-    if (node.comfyClass === "Bjornulf_LoadTextFromFolder") {
+    if (node.comfyClass === "Emiguru_LoadTextFromFolder") {
       // Add a refresh button widget
       // Assuming this is inside your node's setup function
       const refreshButton = node.addWidget(

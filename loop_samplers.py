@@ -14,7 +14,7 @@ class LoopSamplers:
     RETURN_NAMES = ("sampler_name",)
     OUTPUT_IS_LIST = (True,)
     FUNCTION = "create_loop_sampler"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def create_loop_sampler(self, sampler_name):
         if sampler_name == "ALL SAMPLERS":

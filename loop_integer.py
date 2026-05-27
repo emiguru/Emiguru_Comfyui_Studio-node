@@ -21,7 +21,7 @@ class LoopInteger:
     RETURN_TYPES = ("INT",)
     OUTPUT_IS_LIST = (True, False)
     FUNCTION = "create_loop_integer"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def create_loop_integer(self, from_this, to_that, jump):
         range_values = list()

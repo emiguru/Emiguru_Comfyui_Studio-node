@@ -1,9 +1,9 @@
 import { app } from "../../../scripts/app.js";
 
 app.registerExtension({
-    name: "Bjornulf.MathNode",
+    name: "Emiguru.MathNode",
     async nodeCreated(node) {
-        if (node.comfyClass === "Bjornulf_MathNode") {
+        if (node.comfyClass === "Emiguru_MathNode") {
             const updateInputs = () => {
                 const initialWidth = node.size[0];
                 const numInputsWidget = node.widgets.find(w => w.name === "num_inputs");

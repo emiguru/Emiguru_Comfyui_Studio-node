@@ -13,7 +13,7 @@ class WriteTextPickMeGlobal:
     RETURN_NAMES = ("text",)
     FUNCTION = "write_text"
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def write_text(self, global_pickme_id, picked, text, **kwargs):
         return (text,)  # Simply returns the input text
@@ -33,14 +33,14 @@ class LoadTextPickMeGlobal:
     RETURN_TYPES = ("STRING", "STRING", "STRING")
     RETURN_NAMES = ("picked_text", "picked_text_as_variable", "random")
     FUNCTION = "load_text"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def load_text(self, global_pickme_id, prompt=None):
         texts = []
         picked_text = ""
         if prompt:
             for node_id, node_data in prompt.items():
-                if node_data.get("class_type") == "Bjornulf_WriteTextPickMeGlobal":
+                if node_data.get("class_type") == "Emiguru_WriteTextPickMeGlobal":
                     inputs = node_data.get("inputs", {})
                     node_global_pickme_id = inputs.get("global_pickme_id", "default")
                     if node_global_pickme_id == global_pickme_id:

@@ -22,7 +22,7 @@ class ResizeImagePercentage:
     RETURN_TYPES = ("IMAGE", "INT", "INT",)
     RETURN_NAMES = ("IMAGE", "width", "height")
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def resize_image(self, image, percentage=100.0, prompt=None, extra_pnginfo=None):
         # Convert percentage to decimal (e.g., 150% -> 1.5)

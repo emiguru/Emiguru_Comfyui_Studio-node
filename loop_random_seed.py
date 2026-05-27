@@ -11,7 +11,7 @@ class LoopRandomSeed:
     RETURN_TYPES = ("INT",)
     OUTPUT_IS_LIST = (True,)
     FUNCTION = "create_random_seeds"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def create_random_seeds(self, num_seeds, generator_seed):
         import random

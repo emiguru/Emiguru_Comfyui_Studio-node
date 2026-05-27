@@ -34,7 +34,7 @@ class RandomModelSelector:
     RETURN_TYPES = ("MODEL", "CLIP", "VAE", "STRING", "STRING", "STRING")
     RETURN_NAMES = ("model", "clip", "vae", "model_path", "model_name", "model_folder")
     FUNCTION = "random_select_model"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def random_select_model(self, number_of_models, seed, **kwargs):
         random.seed(seed)

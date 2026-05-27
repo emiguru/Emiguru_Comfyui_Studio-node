@@ -19,7 +19,7 @@ class ListSelector:
     RETURN_TYPES = ("INT", "STRING", "INT")
     RETURN_NAMES = ("selected_element_INT", "selected_element_STRING", "list_length_INT")
     FUNCTION = "select_number"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def select_number(self, input_LIST: str, selection: int, delimiter: str):
         # Split the string into a list using the delimiter

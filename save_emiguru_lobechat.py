@@ -7,7 +7,7 @@ import torch
 import gc
 import requests
 
-class SaveBjornulfLobeChat:
+class SaveEmiguruLobeChat:
     @classmethod
     def INPUT_TYPES(cls):
         return {
@@ -17,17 +17,17 @@ class SaveBjornulfLobeChat:
             "hidden": {"prompt": "PROMPT", "extra_pnginfo": "EXTRA_PNGINFO"},
         }
 
-    FUNCTION = "save_bjornulf_lobe_chat"
+    FUNCTION = "save_emiguru_lobe_chat"
     RETURN_TYPES = ()
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
-    def save_bjornulf_lobe_chat(self, image, prompt=None, extra_pnginfo=None):
+    def save_emiguru_lobe_chat(self, image, prompt=None, extra_pnginfo=None):
         # First, attempt to free VRAM
         self.free_vram()
 
         # Ensure the output directory exists
-        output_dir = "./output/BJORNULF_LOBECHAT/"
+        output_dir = "./output/emiguru_LOBECHAT/"
         os.makedirs(output_dir, exist_ok=True)
 
         # Convert the image from ComfyUI format to PIL Image
@@ -59,7 +59,7 @@ class SaveBjornulfLobeChat:
                 metadata.add_text(k, json.dumps(v))
 
         # Update the symbolic link in the output directory
-        link_path = "./output/BJORNULF_API_LAST_IMAGE.png"
+        link_path = "./output/emiguru_API_LAST_IMAGE.png"
         if os.path.exists(link_path):
             os.remove(link_path)
         os.symlink(os.path.abspath(filename), link_path)
@@ -93,12 +93,12 @@ class SaveBjornulfLobeChat:
             "prompt": {
                 "3": {
                     "inputs": {"text": "free VRAM hack"},
-                    "class_type": "Bjornulf_WriteText",
+                    "class_type": "Emiguru_WriteText",
                     "_meta": {"title": "✒ Write Text"}
                 },
                 "4": {
                     "inputs": {"text_value": ["3", 0], "text": "free VRAM hack"},
-                    "class_type": "Bjornulf_ShowText",
+                    "class_type": "Emiguru_ShowText",
                     "_meta": {"title": "👁 Show (Text)"}
                 }
             }

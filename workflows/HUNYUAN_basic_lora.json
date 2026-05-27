@@ -304,7 +304,7 @@
     },
     {
       "id": 68,
-      "type": "Bjornulf_WriteText",
+      "type": "Emiguru_WriteText",
       "pos": [
         -4625,
         1650
@@ -328,7 +328,7 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "Bjornulf_WriteText"
+        "Node name for S&R": "Emiguru_WriteText"
       },
       "widgets_values": [
         "Yoda baking cookies in a vibrant living room. He's surrounded by a colorful, eclectic decor, with a floral-patterned couch, a blue kitchen island, and a purple door in the background. In the foreground, a Hippo, a deer, and a cat sit on a coffee table, looking hungry. The Hippo sits in the middle, holding a cookie."
@@ -338,7 +338,7 @@
     },
     {
       "id": 69,
-      "type": "Bjornulf_ShowStringText",
+      "type": "Emiguru_ShowStringText",
       "pos": [
         -4600,
         1875
@@ -362,7 +362,7 @@
       ],
       "outputs": [],
       "properties": {
-        "Node name for S&R": "Bjornulf_ShowStringText"
+        "Node name for S&R": "Emiguru_ShowStringText"
       },
       "widgets_values": [
         "",
@@ -446,7 +446,7 @@
     },
     {
       "id": 50,
-      "type": "Bjornulf_CivitAILoraSelectorHunyuan",
+      "type": "Emiguru_CivitAILoraSelectorHunyuan",
       "pos": [
         -4225,
         1475
@@ -509,7 +509,7 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "Bjornulf_CivitAILoraSelectorHunyuan"
+        "Node name for S&R": "emiguru_civitAILoraSelectorHunyuan"
       },
       "widgets_values": [
         "lora_hunyuan_video/Monica_s_apartment_Hunyuan_Video_lora_48673748.jpeg",
@@ -896,7 +896,7 @@
     },
     "node_versions": {
       "comfy-core": "0.3.12",
-      "Bjornulf_custom_nodes": "0c2a977076ee58ea4ac8408fd69f6f2ee1e4df6e",
+      "Emiguru_custom_nodes": "0c2a977076ee58ea4ac8408fd69f6f2ee1e4df6e",
       "comfyui-videohelpersuite": "c5216a51c0254372f61d94c365595d29040ff1f2"
     },
     "VHS_latentpreview": false,

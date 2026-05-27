@@ -1,9 +1,9 @@
 import { app } from "../../../scripts/app.js";
 
 app.registerExtension({
-    name: "Bjornulf.FixFace",
+    name: "Emiguru.FixFace",
     async nodeCreated(node) {
-        if (node.comfyClass === "Bjornulf_FixFace") {
+        if (node.comfyClass === "Emiguru_FixFace") {
             const updateInputs = () => {
                 const initialWidth = node.size[0];
                 const numFacesWidget = node.widgets.find(w => w.name === "number_of_faces");

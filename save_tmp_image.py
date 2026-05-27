@@ -18,7 +18,7 @@ class SaveTmpImage:
     FUNCTION = "save_image"
     RETURN_TYPES = ()
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def save_image(self, image, prompt=None, extra_pnginfo=None):
         # Ensure the output directory exists

@@ -7,7 +7,7 @@ function pickGlobalNode(node) {
     
     // Iterate through all nodes in the graph
     app.graph._nodes.forEach(n => {
-        if (n.comfyClass === "Bjornulf_WriteTextPickMeGlobal") {
+        if (n.comfyClass === "Emiguru_WriteTextPickMeGlobal") {
             const nglobal_pickme_idWidget = n.widgets.find(w => w.name === "global_pickme_id");
             const nglobal_pickme_id = nglobal_pickme_idWidget ? nglobal_pickme_idWidget.value : "default";
             if (nglobal_pickme_id === global_pickme_id) {  // Only affect nodes in the same group
@@ -23,9 +23,9 @@ function pickGlobalNode(node) {
 }
 
 app.registerExtension({
-    name: "Bjornulf.WriteTextPickMeGlobal",
+    name: "Emiguru.WriteTextPickMeGlobal",
     async nodeCreated(node) {
-        if (node.comfyClass === "Bjornulf_WriteTextPickMeGlobal") {
+        if (node.comfyClass === "Emiguru_WriteTextPickMeGlobal") {
             // Hide the picked widget from the UI
             const pickedWidget = node.widgets.find(w => w.name === "picked");
             if (pickedWidget && pickedWidget.inputEl) {

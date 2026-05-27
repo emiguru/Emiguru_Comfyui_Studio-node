@@ -1,9 +1,9 @@
 import { app } from "../../../scripts/app.js";
 
 app.registerExtension({
-    name: "Bjornulf.LoopModelClipVae",
+    name: "Emiguru.LoopModelClipVae",
     async nodeCreated(node) {
-        if (node.comfyClass === "Bjornulf_LoopModelClipVae") {
+        if (node.comfyClass === "Emiguru_LoopModelClipVae") {
             const updateInputs = () => {
                 const initialWidth = node.size[0];
                 const numInputsWidget = node.widgets.find(w => w.name === "number_of_inputs");

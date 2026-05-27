@@ -28,13 +28,13 @@ class AudioPreview:
                 raise ValueError("No valid audio path provided.")
 
             # Set up destination directory
-            dest_dir = os.path.join("temp", "Bjornulf")
+            dest_dir = os.path.join("temp", "Emiguru")
             os.makedirs(dest_dir, exist_ok=True)
 
             # Generate unique filename components
             timestamp = int(time.time())
             uuid_str = str(uuid.uuid4()).replace('-', '')[:8]  # Short unique string
-            base_name = "Bjornulf"
+            base_name = "Emiguru"
 
             if audio_path.startswith("http://") or audio_path.startswith("https://"):
                 # Handle URL input
@@ -62,7 +62,7 @@ class AudioPreview:
             # Return UI data for frontend
             return {
                 "ui": {
-                    "audio": [dest_name, "Bjornulf"],
+                    "audio": [dest_name, "Emiguru"],
                     "metadata": {
                         "autoplay": autoplay,
                         "loop": loop

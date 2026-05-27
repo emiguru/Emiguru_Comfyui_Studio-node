@@ -87,9 +87,9 @@ function adjustSize(component) {
 
 // Register the extension
 app.registerExtension({
-    name: "Bjornulf.VideoPreview",
+    name: "Emiguru.VideoPreview",
     async beforeRegisterNodeDef(nodeType, nodeData, appInstance) {
-        if (nodeData?.name === "Bjornulf_VideoPreview") {
+        if (nodeData?.name === "Emiguru_VideoPreview") {
             nodeType.prototype.onExecuted = function(data) {
                 // Retrieve widget values with defaults
                 const autoplay = this.widgets.find(w => w.name === "autoplay")?.value ?? false;

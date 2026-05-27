@@ -15,7 +15,7 @@ class LoadImageWithTransparencyFromPath:
     RETURN_TYPES = ("IMAGE", "MASK", "STRING")
     RETURN_NAMES = ("image", "mask", "image_path")
     FUNCTION = "load_image_alpha"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def load_image_alpha(self, image_path):
         # Validate that image_path is not None or empty

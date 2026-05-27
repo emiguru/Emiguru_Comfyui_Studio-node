@@ -14,7 +14,7 @@ class LoopFloat:
     RETURN_TYPES = ("FLOAT",)
     OUTPUT_IS_LIST = (True, False)
     FUNCTION = "create_loop_float"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def create_loop_float(self, from_this, to_that, jump):
         range_values = []

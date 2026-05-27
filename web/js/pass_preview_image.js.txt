@@ -2,9 +2,9 @@ import { app } from "../../../scripts/app.js";
 import { api } from "../../../scripts/api.js";
 
 app.registerExtension({
-    name: "Bjornulf.PassPreviewImage",
+    name: "Emiguru.PassPreviewImage",
     async nodeCreated(node) {
-        if (node.comfyClass === "Bjornulf_PassPreviewImage") {
+        if (node.comfyClass === "Emiguru_PassPreviewImage") {
             const showImage = (name) => {
                 console.log("name:" + name);
                 const img = new Image();
@@ -33,9 +33,9 @@ app.registerExtension({
     }
 });
 // app.registerExtension({
-//     name: "Bjornulf.PassPreviewImage",
+//     name: "Emiguru.PassPreviewImage",
 //     async nodeCreated(node) {
-//         if (node.comfyClass === "Bjornulf_PassPreviewImage") {
+//         if (node.comfyClass === "Emiguru_PassPreviewImage") {
 //             const showImage = () => {
 //                 const img = new Image();
 //                 img.onload = () => {

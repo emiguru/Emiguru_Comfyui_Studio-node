@@ -26,13 +26,13 @@ import subprocess
 def get_civitai_base_paths():
     """Returns common paths for CivitAI integration"""
     custom_nodes_dir = Path(__file__).parent.parent.parent.parent
-    civitai_base_path = custom_nodes_dir / "ComfyUI" / "custom_nodes" / "Bjornulf_custom_nodes" / "civitai"
+    civitai_base_path = custom_nodes_dir / "ComfyUI" / "custom_nodes" / "Emiguru_custom_nodes" / "civitai"
     return custom_nodes_dir, civitai_base_path, civitai_base_path  # Last one is parsed_models_path
 
 def setup_checkpoint_directory(model_type):
     """Creates and registers checkpoint directory for specific model type"""
     _, _, parsed_models_path = get_civitai_base_paths()
-    checkpoint_dir = Path(folder_paths.models_dir) / "checkpoints" / "Bjornulf_civitAI" / model_type
+    checkpoint_dir = Path(folder_paths.models_dir) / "checkpoints" / "emiguru_civitAI" / model_type
     
     checkpoint_dir.mkdir(parents=True, exist_ok=True)
     
@@ -111,13 +111,13 @@ def create_symlink(source, target_name, parent_dir=None):
                 
                 # Check if the source exists with the given case
                 if not source_path.exists():
-                    # Try case variations for Bjornulf/bjornulf part of the path
-                    if 'Bjornulf_custom_nodes' in str(source_path):
-                        alt_source_path = Path(str(source_path).replace('Bjornulf_custom_nodes', 'bjornulf_custom_nodes'))
+                    # Try case variations for Emiguru/Emiguru part of the path
+                    if 'Emiguru_custom_nodes' in str(source_path):
+                        alt_source_path = Path(str(source_path).replace('Emiguru_custom_nodes', 'Emiguru_custom_nodes'))
                         if alt_source_path.exists():
                             source_path = alt_source_path
-                    elif 'bjornulf_custom_nodes' in str(source_path):
-                        alt_source_path = Path(str(source_path).replace('bjornulf_custom_nodes', 'Bjornulf_custom_nodes'))
+                    elif 'Emiguru_custom_nodes' in str(source_path):
+                        alt_source_path = Path(str(source_path).replace('Emiguru_custom_nodes', 'Emiguru_custom_nodes'))
                         if alt_source_path.exists():
                             source_path = alt_source_path
                 
@@ -198,13 +198,13 @@ def download_file(url, destination_path, model_name, api_token=None):
 
 # Set up main checkpoint directory
 _, civitai_base_path, parsed_models_path = get_civitai_base_paths()
-bjornulf_checkpoint_path = Path(folder_paths.models_dir) / "checkpoints" / "Bjornulf_civitAI"
-bjornulf_checkpoint_path.mkdir(parents=True, exist_ok=True)
+emiguru_checkpoint_path = Path(folder_paths.models_dir) / "checkpoints" / "emiguru_civitAI"
+emiguru_checkpoint_path.mkdir(parents=True, exist_ok=True)
 
 # Register the main checkpoint folder
 checkpoint_folders = list(folder_paths.folder_names_and_paths["checkpoints"])
-if str(bjornulf_checkpoint_path) not in checkpoint_folders:
-    checkpoint_folders.append(str(bjornulf_checkpoint_path))
+if str(emiguru_checkpoint_path) not in checkpoint_folders:
+    checkpoint_folders.append(str(emiguru_checkpoint_path))
     folder_paths.folder_names_and_paths["checkpoints"] = tuple(checkpoint_folders)
 
 # Define image folders
@@ -222,7 +222,7 @@ image_folders = {
     # "NSFW_lora_hunyuan_video": "NSFW_lora_hunyuan_video"
 }
 
-# Set up image folders using the function, placing links under input/Bjornulf/
+# Set up image folders using the function, placing links under input/Emiguru/
 setup_image_folders(image_folders)
 
 def get_civitai():
@@ -280,7 +280,7 @@ class APIGenerateCivitAI:
     CATEGORY = "Civitai"
 
     def __init__(self):
-        self.links_dir = "Bjornulf/civitai_links"
+        self.links_dir = "Emiguru/civitai_links"
         os.makedirs(self.links_dir, exist_ok=True)
         self._interrupt_event = threading.Event()
 
@@ -470,12 +470,12 @@ class LoadCivitAILinks:
 
     def __init__(self):
         """Initialize the node with the links directory."""
-        self.links_dir = "Bjornulf/civitai_links"
+        self.links_dir = "Emiguru/civitai_links"
         os.makedirs(self.links_dir, exist_ok=True)
 
     @classmethod
     def get_links_files(cls):
-        links_dir = "Bjornulf/civitai_links"
+        links_dir = "Emiguru/civitai_links"
         if not os.path.exists(links_dir):
             return []
         files = [f for f in os.listdir(links_dir) if f.endswith(".txt")]
@@ -589,7 +589,7 @@ class LoadCivitAILinks:
 @PromptServer.instance.routes.post("/get_civitai_links_files")
 async def get_civitai_links_files(request):
     try:
-        links_dir = "Bjornulf/civitai_links"
+        links_dir = "Emiguru/civitai_links"
         if not os.path.exists(links_dir):
             return web.json_response({
                 "success": False,
@@ -677,7 +677,7 @@ class CivitAIModelSelectorSD15:
     RETURN_TYPES = ("MODEL", "CLIP", "VAE", "STRING", "STRING")
     RETURN_NAMES = ("model", "clip", "vae", "name", "civitai_url")
     FUNCTION = "load_model"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
  
     def load_model(self, image, civitai_token):
         if image == "none":
@@ -705,7 +705,7 @@ class CivitAIModelSelectorSD15:
             raise ValueError(f"No model information found for image: {image_name}")
 
         # Create checkpoints directory if it doesn't exist
-        checkpoint_dir = os.path.join(folder_paths.models_dir, "checkpoints", "Bjornulf_civitAI", "sd1.5")
+        checkpoint_dir = os.path.join(folder_paths.models_dir, "checkpoints", "emiguru_civitAI", "sd1.5")
         os.makedirs(checkpoint_dir, exist_ok=True)
 
         # Expected model filename
@@ -728,7 +728,7 @@ class CivitAIModelSelectorSD15:
                 raise ValueError(f"Failed to download model: {e}")
 
         # Get relative path
-        relative_model_path = os.path.join("Bjornulf_civitAI", "sd1.5", model_filename)
+        relative_model_path = os.path.join("emiguru_civitAI", "sd1.5", model_filename)
 
         # Try loading with relative path first
         try:
@@ -778,7 +778,7 @@ class CivitAIModelSelectorSDXL:
     RETURN_TYPES = ("MODEL", "CLIP", "VAE", "STRING", "STRING")
     RETURN_NAMES = ("model", "clip", "vae", "name", "civitai_url")
     FUNCTION = "load_model"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
  
     def load_model(self, image, civitai_token):
         if image == "none":
@@ -806,7 +806,7 @@ class CivitAIModelSelectorSDXL:
             raise ValueError(f"No model information found for image: {image_name}")
 
         # Create checkpoints directory if it doesn't exist
-        checkpoint_dir = os.path.join(folder_paths.models_dir, "checkpoints", "Bjornulf_civitAI", "sdxl_1.0")
+        checkpoint_dir = os.path.join(folder_paths.models_dir, "checkpoints", "emiguru_civitAI", "sdxl_1.0")
         os.makedirs(checkpoint_dir, exist_ok=True)
 
         # Expected model filename
@@ -829,7 +829,7 @@ class CivitAIModelSelectorSDXL:
                 raise ValueError(f"Failed to download model: {e}")
 
         # Get relative path
-        relative_model_path = os.path.join("Bjornulf_civitAI", "sdxl_1.0", model_filename)
+        relative_model_path = os.path.join("emiguru_civitAI", "sdxl_1.0", model_filename)
 
         # Try loading with relative path first
         try:
@@ -880,7 +880,7 @@ class CivitAIModelSelectorFLUX_D:
     RETURN_TYPES = ("MODEL", "CLIP", "VAE", "STRING", "STRING")
     RETURN_NAMES = ("model", "clip", "vae", "name", "civitai_url")
     FUNCTION = "load_model"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
  
     def load_model(self, image, civitai_token):
         if image == "none":
@@ -908,7 +908,7 @@ class CivitAIModelSelectorFLUX_D:
             raise ValueError(f"No model information found for image: {image_name}")
 
         # Create checkpoints directory if it doesn't exist
-        checkpoint_dir = os.path.join(folder_paths.models_dir, "checkpoints", "Bjornulf_civitAI", "flux_d")
+        checkpoint_dir = os.path.join(folder_paths.models_dir, "checkpoints", "emiguru_civitAI", "flux_d")
         os.makedirs(checkpoint_dir, exist_ok=True)
 
         # Expected model filename
@@ -931,7 +931,7 @@ class CivitAIModelSelectorFLUX_D:
                 raise ValueError(f"Failed to download model: {e}")
 
         # Get relative path
-        relative_model_path = os.path.join("Bjornulf_civitAI", "flux_d", model_filename)
+        relative_model_path = os.path.join("emiguru_civitAI", "flux_d", model_filename)
 
         # Try loading with relative path first
         try:
@@ -981,7 +981,7 @@ class CivitAIModelSelectorFLUX_S:
     RETURN_TYPES = ("MODEL", "CLIP", "VAE", "STRING", "STRING")
     RETURN_NAMES = ("model", "clip", "vae", "name", "civitai_url")
     FUNCTION = "load_model"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
  
     def load_model(self, image, civitai_token):
         if image == "none":
@@ -1009,7 +1009,7 @@ class CivitAIModelSelectorFLUX_S:
             raise ValueError(f"No model information found for image: {image_name}")
 
         # Create checkpoints directory if it doesn't exist
-        checkpoint_dir = os.path.join(folder_paths.models_dir, "checkpoints", "Bjornulf_civitAI", "flux_s")
+        checkpoint_dir = os.path.join(folder_paths.models_dir, "checkpoints", "emiguru_civitAI", "flux_s")
         os.makedirs(checkpoint_dir, exist_ok=True)
 
         # Expected model filename
@@ -1032,7 +1032,7 @@ class CivitAIModelSelectorFLUX_S:
                 raise ValueError(f"Failed to download model: {e}")
 
         # Get relative path
-        relative_model_path = os.path.join("Bjornulf_civitAI", "flux_s", model_filename)
+        relative_model_path = os.path.join("emiguru_civitAI", "flux_s", model_filename)
 
         # Try loading with relative path first
         try:
@@ -1082,7 +1082,7 @@ class CivitAIModelSelectorPony:
     RETURN_TYPES = ("MODEL", "CLIP", "VAE", "STRING", "STRING")
     RETURN_NAMES = ("model", "clip", "vae", "name", "civitai_url")
     FUNCTION = "load_model"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
  
     def load_model(self, image, civitai_token):
         if image == "none":
@@ -1110,7 +1110,7 @@ class CivitAIModelSelectorPony:
             raise ValueError(f"No model information found for image: {image_name}")
 
         # Create checkpoints directory if it doesn't exist
-        checkpoint_dir = os.path.join(folder_paths.models_dir, "checkpoints", "Bjornulf_civitAI", "pony")
+        checkpoint_dir = os.path.join(folder_paths.models_dir, "checkpoints", "emiguru_civitAI", "pony")
         os.makedirs(checkpoint_dir, exist_ok=True)
 
         # Expected model filename
@@ -1133,7 +1133,7 @@ class CivitAIModelSelectorPony:
                 raise ValueError(f"Failed to download model: {e}")
 
         # Get relative path
-        relative_model_path = os.path.join("Bjornulf_civitAI", "pony", model_filename)
+        relative_model_path = os.path.join("emiguru_civitAI", "pony", model_filename)
 
         # Try loading with relative path first
         try:
@@ -1186,7 +1186,7 @@ class CivitAILoraSelectorSD15:
     RETURN_TYPES = ("MODEL", "CLIP", "STRING", "STRING", "STRING")
     RETURN_NAMES = ("model", "clip", "name", "civitai_url", "trigger_words")
     FUNCTION = "load_lora"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
  
     def load_lora(self, image, model, clip, strength_model, strength_clip, civitai_token):
         def download_file(url, destination_path, lora_name, api_token=None):
@@ -1253,7 +1253,7 @@ class CivitAILoraSelectorSD15:
             raise ValueError(f"No LoRA information found for image: {image_name}")
 
         # Create loras directory if it doesn't exist
-        lora_dir = os.path.join(folder_paths.models_dir, "loras", "Bjornulf_civitAI", "sd_1.5")
+        lora_dir = os.path.join(folder_paths.models_dir, "loras", "emiguru_civitAI", "sd_1.5")
         os.makedirs(lora_dir, exist_ok=True)
 
         # Expected lora filename
@@ -1276,7 +1276,7 @@ class CivitAILoraSelectorSD15:
                 raise ValueError(f"Failed to download LoRA: {e}")
 
         # Get relative path
-        relative_lora_path = os.path.join("Bjornulf_civitAI", "sd_1.5", lora_filename)
+        relative_lora_path = os.path.join("emiguru_civitAI", "sd_1.5", lora_filename)
 
         # Load the LoRA
         try:
@@ -1334,7 +1334,7 @@ class CivitAILoraSelectorSDXL:
     RETURN_TYPES = ("MODEL", "CLIP", "STRING", "STRING", "STRING")
     RETURN_NAMES = ("model", "clip", "name", "civitai_url", "trigger_words")
     FUNCTION = "load_lora"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
  
     def load_lora(self, image, model, clip, strength_model, strength_clip, civitai_token):
         def download_file(url, destination_path, lora_name, api_token=None):
@@ -1401,7 +1401,7 @@ class CivitAILoraSelectorSDXL:
             raise ValueError(f"No LoRA information found for image: {image_name}")
 
         # Create loras directory if it doesn't exist
-        lora_dir = os.path.join(folder_paths.models_dir, "loras", "Bjornulf_civitAI", "sdxl_1.0")
+        lora_dir = os.path.join(folder_paths.models_dir, "loras", "emiguru_civitAI", "sdxl_1.0")
         os.makedirs(lora_dir, exist_ok=True)
 
         # Expected lora filename
@@ -1424,7 +1424,7 @@ class CivitAILoraSelectorSDXL:
                 raise ValueError(f"Failed to download LoRA: {e}")
 
         # Get relative path
-        relative_lora_path = os.path.join("Bjornulf_civitAI", "sdxl_1.0", lora_filename)
+        relative_lora_path = os.path.join("emiguru_civitAI", "sdxl_1.0", lora_filename)
 
         # Load the LoRA
         try:
@@ -1482,7 +1482,7 @@ class CivitAILoraSelectorPONY:
     RETURN_TYPES = ("MODEL", "CLIP", "STRING", "STRING", "STRING")
     RETURN_NAMES = ("model", "clip", "name", "civitai_url", "trigger_words")
     FUNCTION = "load_lora"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
  
     def load_lora(self, image, model, clip, strength_model, strength_clip, civitai_token):
         def download_file(url, destination_path, lora_name, api_token=None):
@@ -1549,7 +1549,7 @@ class CivitAILoraSelectorPONY:
             raise ValueError(f"No LoRA information found for image: {image_name}")
 
         # Create loras directory if it doesn't exist
-        lora_dir = os.path.join(folder_paths.models_dir, "loras", "Bjornulf_civitAI", "pony")
+        lora_dir = os.path.join(folder_paths.models_dir, "loras", "emiguru_civitAI", "pony")
         os.makedirs(lora_dir, exist_ok=True)
 
         # Expected lora filename
@@ -1572,7 +1572,7 @@ class CivitAILoraSelectorPONY:
                 raise ValueError(f"Failed to download LoRA: {e}")
 
         # Get relative path
-        relative_lora_path = os.path.join("Bjornulf_civitAI", "pony", lora_filename)
+        relative_lora_path = os.path.join("emiguru_civitAI", "pony", lora_filename)
 
         # Load the LoRA
         try:
@@ -1640,7 +1640,7 @@ class CivitAILoraSelectorHunyuan:
     RETURN_TYPES = ("MODEL", "CLIP", "STRING", "STRING", "STRING")
     RETURN_NAMES = ("model", "clip", "name", "civitai_url", "trigger_words")
     FUNCTION = "load_lora"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
  
     def load_lora(self, image, model, clip, strength_model, strength_clip, civitai_token):
         def download_file(url, destination_path, lora_name, api_token=None):
@@ -1705,7 +1705,7 @@ class CivitAILoraSelectorHunyuan:
         if not lora_info:
             raise ValueError(f"No LoRA information found for image: {image_name}")
 
-        lora_dir = os.path.join(folder_paths.models_dir, "loras", "Bjornulf_civitAI", hunYuan)
+        lora_dir = os.path.join(folder_paths.models_dir, "loras", "emiguru_civitAI", hunYuan)
         os.makedirs(lora_dir, exist_ok=True)
 
         lora_filename = f"{lora_info['name']}.safetensors"
@@ -1723,7 +1723,7 @@ class CivitAILoraSelectorHunyuan:
             except Exception as e:
                 raise ValueError(f"Failed to download LoRA: {e}")
 
-        relative_lora_path = os.path.join("Bjornulf_civitAI", hunYuan, lora_filename)
+        relative_lora_path = os.path.join("emiguru_civitAI", hunYuan, lora_filename)
 
         try:
             lora_loader = nodes.LoraLoader()

@@ -33,7 +33,7 @@ class PickInput:
     RETURN_TYPES = (Everything("*"),)
     RETURN_NAMES = ("output",)
     FUNCTION = "pick_input"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def play_audio(self):
         # Check if the operating system is Windows
@@ -98,78 +98,78 @@ class PickInput:
             return web.Response(text=f"Input {index + 1} selected")
         return select_input
 
-@PromptServer.instance.routes.get("/bjornulf_stop_pick")
+@PromptServer.instance.routes.get("/emiguru_stop_pick")
 async def stop_node_pick(request):
     # logging.info("Stop node pick called")
     PickInput.should_stop = True
     PickInput.is_paused = False  # Ensure the loop exits
     return web.Response(text="Workflow stopped")
 
-@PromptServer.instance.routes.get("/bjornulf_select_input_1")
-async def bjornulf_select_input_1(request):
+@PromptServer.instance.routes.get("/emiguru_select_input_1")
+async def emiguru_select_input_1(request):
     # logging.info("Resume node called")
     PickInput.is_paused = False
     PickInput.selected_input="input_1"
     return web.Response(text="Node resumed")
 
-@PromptServer.instance.routes.get("/bjornulf_select_input_2")
-async def bjornulf_select_input_2(request):
+@PromptServer.instance.routes.get("/emiguru_select_input_2")
+async def emiguru_select_input_2(request):
     # logging.info("Resume node called")
     PickInput.is_paused = False
     PickInput.selected_input="input_2"
     return web.Response(text="Node resumed")
 
-@PromptServer.instance.routes.get("/bjornulf_select_input_3")
-async def bjornulf_select_input_3(request):
+@PromptServer.instance.routes.get("/emiguru_select_input_3")
+async def emiguru_select_input_3(request):
     # logging.info("Resume node called")
     PickInput.is_paused = False
     PickInput.selected_input="input_3"
     return web.Response(text="Node resumed")
 
-@PromptServer.instance.routes.get("/bjornulf_select_input_4")
-async def bjornulf_select_input_4(request):
+@PromptServer.instance.routes.get("/emiguru_select_input_4")
+async def emiguru_select_input_4(request):
     # logging.info("Resume node called")
     PickInput.is_paused = False
     PickInput.selected_input="input_4"
     return web.Response(text="Node resumed")
 
-@PromptServer.instance.routes.get("/bjornulf_select_input_5")
-async def bjornulf_select_input_5(request):
+@PromptServer.instance.routes.get("/emiguru_select_input_5")
+async def emiguru_select_input_5(request):
     # logging.info("Resume node called")
     PickInput.is_paused = False
     PickInput.selected_input="input_5"
     return web.Response(text="Node resumed")
 
-@PromptServer.instance.routes.get("/bjornulf_select_input_6")
-async def bjornulf_select_input_6(request):
+@PromptServer.instance.routes.get("/emiguru_select_input_6")
+async def emiguru_select_input_6(request):
     # logging.info("Resume node called")
     PickInput.is_paused = False
     PickInput.selected_input="input_6"
     return web.Response(text="Node resumed")
 
-@PromptServer.instance.routes.get("/bjornulf_select_input_7")
-async def bjornulf_select_input_7(request):
+@PromptServer.instance.routes.get("/emiguru_select_input_7")
+async def emiguru_select_input_7(request):
     # logging.info("Resume node called")
     PickInput.is_paused = False
     PickInput.selected_input="input_7"
     return web.Response(text="Node resumed")
 
-@PromptServer.instance.routes.get("/bjornulf_select_input_8")
-async def bjornulf_select_input_8(request):
+@PromptServer.instance.routes.get("/emiguru_select_input_8")
+async def emiguru_select_input_8(request):
     # logging.info("Resume node called")
     PickInput.is_paused = False
     PickInput.selected_input="input_8"
     return web.Response(text="Node resumed")
 
-@PromptServer.instance.routes.get("/bjornulf_select_input_9")
-async def bjornulf_select_input_9(request):
+@PromptServer.instance.routes.get("/emiguru_select_input_9")
+async def emiguru_select_input_9(request):
     # logging.info("Resume node called")
     PickInput.is_paused = False
     PickInput.selected_input="input_9"
     return web.Response(text="Node resumed")
 
-@PromptServer.instance.routes.get("/bjornulf_select_input_10")
-async def bjornulf_select_input_10(request):
+@PromptServer.instance.routes.get("/emiguru_select_input_10")
+async def emiguru_select_input_10(request):
     # logging.info("Resume node called")
     PickInput.is_paused = False
     PickInput.selected_input="input_10"

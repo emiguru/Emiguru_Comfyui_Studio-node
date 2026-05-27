@@ -18,7 +18,7 @@ class AnythingToInt:
     RETURN_TYPES = ("INT",)
     RETURN_NAMES = ("integer",)
     FUNCTION = "any_to_int"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def any_to_int(self, anything):
         try:

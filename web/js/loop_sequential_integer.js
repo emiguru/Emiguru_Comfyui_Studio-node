@@ -11,9 +11,9 @@ style.textContent = `
 `;
 
 app.registerExtension({
-  name: "Bjornulf.LoopIntegerSequential",
+  name: "Emiguru.LoopIntegerSequential",
   async nodeCreated(node) {
-    if (node.comfyClass !== "Bjornulf_LoopIntegerSequential") return;
+    if (node.comfyClass !== "Emiguru_LoopIntegerSequential") return;
 
     // Hide seed widget
     const seedWidget = node.widgets.find((w) => w.name === "seed");

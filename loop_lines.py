@@ -10,7 +10,7 @@ class LoopAllLines:
     RETURN_TYPES = ("STRING",)
     FUNCTION = "all_lines"
     OUTPUT_IS_LIST = (True,)
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def all_lines(self, text):
         # Split the input text into lines

@@ -31,7 +31,7 @@ class LoopModelSelector:
     RETURN_TYPES = ("MODEL", "CLIP", "VAE", "STRING", "STRING", "STRING")
     RETURN_NAMES = ("model", "clip", "vae", "model_path", "model_name", "model_folder")
     FUNCTION = "select_models"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     OUTPUT_IS_LIST = (True, True, True, True, True, True)
 
     def select_models(self, number_of_models, **kwargs):

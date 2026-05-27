@@ -11,7 +11,7 @@ class RandomImage:
 
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "random_image"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def random_image(self, number_of_images, **kwargs):
         valid_images = []

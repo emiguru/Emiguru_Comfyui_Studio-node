@@ -1,9 +1,9 @@
 import { app } from "../../../scripts/app.js";
 
 app.registerExtension({
-    name: "Bjornulf.CombineTextsByLines",
+    name: "Emiguru.CombineTextsByLines",
     async nodeCreated(node) {
-        if (node.comfyClass === "Bjornulf_CombineTextsByLines") {
+        if (node.comfyClass === "Emiguru_CombineTextsByLines") {
             const updateInputsAndOutputs = () => {
                 const numInputsWidget = node.widgets.find(w => w.name === "number_of_inputs");
                 const numLinesWidget = node.widgets.find(w => w.name === "number_of_lines");

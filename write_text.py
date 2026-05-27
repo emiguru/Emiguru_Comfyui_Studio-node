@@ -11,7 +11,7 @@ class WriteText:
     RETURN_NAMES = ("text",)
     FUNCTION = "write_text"
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def write_text(self, text):
         return (text,)

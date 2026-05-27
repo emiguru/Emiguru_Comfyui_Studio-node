@@ -1,9 +1,9 @@
 import { app } from "../../../scripts/app.js";
 
 app.registerExtension({
-  name: "Bjornulf.PickInput",
+  name: "Emiguru.PickInput",
   async nodeCreated(node) {
-    if (node.comfyClass === "Bjornulf_PickInput") {
+    if (node.comfyClass === "Emiguru_PickInput") {
       const updateInputButtons = (numInputs) => {
         // Remove only the dynamic widgets (input buttons and stop button)
         node.widgets = node.widgets.filter((w) => !w.dynamicWidget);
@@ -15,7 +15,7 @@ app.registerExtension({
             `Input ${i}`,
             `input_button_${i}`,
             () => {
-              fetch(`/bjornulf_select_input_${i}`, { method: "GET" })
+              fetch(`/emiguru_select_input_${i}`, { method: "GET" })
                 .then((response) => response.text())
                 .then((data) => {
                   console.log(`Input ${i} response:`, data);
@@ -29,7 +29,7 @@ app.registerExtension({
 
         // Add the Stop button
         const stopButton = node.addWidget("button", "Stop", "Stop", () => {
-          fetch("/bjornulf_stop_pick", { method: "GET" })
+          fetch("/emiguru_stop_pick", { method: "GET" })
             .then((response) => response.text())
             .then((data) => {
               console.log("Stop response:", data);

@@ -16,7 +16,7 @@ class CombineTexts:
     RETURN_TYPES = ("STRING",)
     FUNCTION = "combine_texts"
     OUTPUT_IS_LIST = (False,)
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def combine_texts(self, number_of_inputs, delimiter, **kwargs):
         def flatten(item):

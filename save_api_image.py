@@ -14,7 +14,7 @@ class SaveApiImage:
     FUNCTION = "save_api_image"
     RETURN_TYPES = ()
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def save_api_image(self, image):
         # Ensure the output directory exists

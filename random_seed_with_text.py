@@ -13,7 +13,7 @@ class TextToStringAndSeed:
     RETURN_NAMES = ("text", "random_seed")
     RETURN_TYPES = ("STRING", "INT")
     FUNCTION = "text_with_random_seed"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def text_with_random_seed(self, text, seed):
         # Generate a random seed (integer)

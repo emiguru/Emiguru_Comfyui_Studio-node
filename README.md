@@ -1,4 +1,4 @@
-# 🔗 Comfyui : Bjornulf_custom_nodes v1.1.8 🔗
+# 🔗 Comfyui : Emiguru_custom_nodes v1.1.8 🔗
 
 A list of 170 custom nodes for Comfyui : Display, manipulate, create and edit text, images, videos, loras, generate characters and more.  
 You can manage looping operations, generate randomized content, trigger logical conditions, pause and manually control your workflows and even work with external AI tools, like Ollama or Text To Speech.  
@@ -16,13 +16,13 @@ Last update video :
 Very active development, new nodes, new features, new ideas, new possibilities...  
 Let me know if you have any issues, they must be solved for everyone !  
 
-Support me, this project and my other AI exciting projects : ❤️❤️❤️ <https://ko-fi.com/bjornulf> ❤️❤️❤️
+Support me, this project and my other AI exciting projects : ❤️❤️❤️ <https://ko-fi.com/Emiguru> ❤️❤️❤️
 
 # ☘ This project is part of my AI trio. ☘
 
-1 - 📝 Text/Chat AI generation : [Bjornulf Lobe Chat Fork](https://github.com/justUmen/Bjornulf_lobe-chat)  
-2 - 🔊 Speech AI generation : [Bjornulf Text To Speech](https://github.com/justUmen/Bjornulf_XTTS)  
-<u>**3 - 🎨 Image AI generation :** [Bjornulf Comfyui custom nodes](https://github.com/justUmen/Bjornulf_custom_nodes) (you are here)</u>  
+1 - 📝 Text/Chat AI generation : [Emiguru Lobe Chat Fork](https://github.com/justUmen/emiguru_lobe-chat)  
+2 - 🔊 Speech AI generation : [Emiguru Text To Speech](https://github.com/justUmen/emiguru_XTTS)  
+<u>**3 - 🎨 Image AI generation :** [Emiguru Comfyui custom nodes](https://github.com/justUmen/Emiguru_custom_nodes) (you are here)</u>  
 
 # 📋 Nodes menu by category
 
@@ -56,7 +56,7 @@ Support me, this project and my other AI exciting projects : ❤️❤️❤️ 
 `112.` [✨➜🔢 Anything to Float](#112----anything-to-float)  
 `113.` [📝🔪 Text split in 5](#113----text-split-in-5)  
 `132.` [📝🔪 Text split in 10](#132----text-split-in-10)  
-`115.` [📥 Load Text From Bjornulf Folder](#115----load-text-from-bjornulf-folder)  
+`115.` [📥 Load Text From Emiguru Folder](#115----load-text-from-Emiguru-folder)  
 `116.` [📥 Load Text From Path](#116----load-text-from-path)  
 `117.` [📝👈🅰️ Line selector (🎲 or ♻ or ♻📑)](#117---🅰%EF%B8%8F-line-selector--or--or-)  
 `131.` [✒👉 Write Pick Me Chain](#131----write-pick-me-chain)  
@@ -125,7 +125,7 @@ Support me, this project and my other AI exciting projects : ❤️❤️❤️ 
 `140.` [🎲 Random Float](#140----random-float)  
 
 ## 🖼💾 Save Image / Text 💾🖼
-`16.` [💾🖼💬 Save image for Bjornulf LobeChat](#16----save-image-for-bjornulf-lobechat-for-my-custom-lobe-chat)  
+`16.` [💾🖼💬 Save image for Emiguru LobeChat](#16----save-image-for-Emiguru-lobechat-for-my-custom-lobe-chat)  
 `17.` [💾🖼 Save image as `tmp_api.png` Temporary API](#17----save-image-as-tmp_apipng-temporary-api-%EF%B8%8F)  
 `18.` [💾🖼📁 Save image to a chosen folder name](#18----save-image-to-a-chosen-folder-name)  
 `14.` [💾🖼 Save Exact name](#1314------resize-and-save-exact-name-%EF%B8%8F)  
@@ -277,7 +277,7 @@ I have a computer with a 4070 super with 12GB and flux fp8 simple wokflow take a
 
 My referal link for Runpod : <https://runpod.io?ref=tkowk7g5> (If you use that i will have a commission, at no extra cost for you.)  
 If you want to use my nodes and comfyui in the cloud (and can install more stuff), I'm managing an optimized ready-to-use template on runpod : <https://runpod.io/console/deploy?template=r32dtr35u1&ref=tkowk7g5>  
-Template name : `bjornulf-comfyui-allin-workspace`, can be operational in ~3 minutes. (Depending on your pod, setup and download of extra models or whatever not included.)  
+Template name : `emiguru-comfyui-allin-workspace`, can be operational in ~3 minutes. (Depending on your pod, setup and download of extra models or whatever not included.)  
 You need to create and select a network volume before using that, size is up to you, i have 50Gb Storage because i use cloud only for Flux or lora training on a 4090. (~0.7$/hour)  
 ⚠️ When pod is ready, you need to open a terminal in browser (After clicking on `connect` from your pod) and use this to launch ComfyUI manually : `cd /workspace/ComfyUI && python main.py --listen 0.0.0.0 --port 3000` or the alias `start_comfy` (Much better to control it with a terminal, check logs, etc...)  
 After that you can just click on the `Connect to port 3000` button.  
@@ -299,7 +299,7 @@ huggingface-cli download comfyanonymous/flux_text_encoders clip_l.safetensors --
 huggingface-cli download comfyanonymous/flux_text_encoders t5xxl_fp16.safetensors --local-dir /workspace/ComfyUI/models/clip
 huggingface-cli download black-forest-labs/FLUX.1-dev ae.safetensors --local-dir /workspace/ComfyUI/models/vae
 ```
-To use Flux you can just drag and drop in your browser comfyui interface the .json from my github repo : `workflows/FLUX_dev_troll.json`, direct link : <https://github.com/justUmen/ComfyUI-BjornulfNodes/blob/main/workflows/FLUX_dev_troll.json>.  
+To use Flux you can just drag and drop in your browser comfyui interface the .json from my github repo : `workflows/FLUX_dev_troll.json`, direct link : <https://github.com/justUmen/ComfyUI-EmiguruNodes/blob/main/workflows/FLUX_dev_troll.json>.  
 
 For downloading from civitai (get token here <https://civitai.com/user/account>), just copy/paste the link of checkpoint you want to download and use something like that, with your token in URL :  
 ```
@@ -349,14 +349,14 @@ If you want to use a python virtual environment only for comfyUI, which I recomm
 
 ```
 sudo apt-get install python3-venv python3-pip
-python3 -m venv /the/path/you/want/venv/bjornulf_comfyui
+python3 -m venv /the/path/you/want/venv/emiguru_comfyui
 ```
 
 Once you have your environment in this new folder, you can activate it with and install dependencies inside :  
 
 ```
-source /the/path/you/want/venv/bjornulf_comfyui/bin/activate
-cd custom_nodes/Bjornulf_custom_nodes
+source /the/path/you/want/venv/emiguru_comfyui/bin/activate
+cd custom_nodes/Emiguru_custom_nodes
 pip install -r requirements.txt
 ```
 
@@ -375,7 +375,7 @@ cd /where/you/installed/ComfyUI && python main.py
 - **v0.5**: New node : Remove image transparency (alpha) - Fill alpha channel with solid color.
 - **v0.5**: New node : Image to grayscale (black & white) - Convert an image to grayscale.
 - **v0.6**: New node : Combine images (Background + Overlay) - Combine two images into a single image.
-- **v0.7**: Replace Save API node with Save Bjornulf Lobechat node. (For my custom lobe-chat)
+- **v0.7**: Replace Save API node with Save Emiguru Lobechat node. (For my custom lobe-chat)
 - **v0.8**: Combine images : add an option to put image top, bottom or center.
 - **v0.8**: Combine texts : add option for slashes /
 - **v0.8**: Add basic node to transform greenscreen in to transparency.
@@ -405,7 +405,7 @@ cd /where/you/installed/ComfyUI && python main.py
 - **v0.32**: Quick rename to avoid breaking loop_text node.
 - **v0.33**: Control random on paused nodes, fix pydub sound bug permissions on Windows.
 - **v0.34**: Two new nodes : Load Images from output folder and Select an Image, Pick.
-- **v0.35**: Great improvements of the TTS node 31. It will also save the audio file in the "ComfyUI/Bjornulf_TTS/" folder. - Not tested on windows yet -
+- **v0.35**: Great improvements of the TTS node 31. It will also save the audio file in the "ComfyUI/emiguru_TTS/" folder. - Not tested on windows yet -
 - **v0.36**: Fix random model.
 - **v0.37**: New node : Random Load checkpoint (Model Selector). Alternative to the random checkpoint node. (Not preloading all checkpoints in memory, slower to switch between checkpoints, but more outputs to decide where to store your results.)
 - **v0.38**: New node : If-Else logic. (input == compare_with), examples with different latent space size. +fix some deserialization issues.
@@ -422,7 +422,7 @@ cd /where/you/installed/ComfyUI && python main.py
 - **v0.49**: New node : Loop Sequential (Integer) - Loop through a range of integer values. (But once per workflow run), audio sync is smarter and adapt the video duration to the audio duration.
 - **v0.50**: allow audio in Images to Video path (tmp video). Add three new nodes : Concat Videos, combine video/audio and Loop Sequential (input Lines). save text changes to write inside Comfyui folder. Fix random line from input outputing LIST. ❗ Breaking change to audio/video sync node, allowing different types as input.
 - **v0.51**: Fix some issues with audio/video sync node. Add two new nodes : merge images/videos vertical and horizontal. add requirements.txt and ollama_ip.txt
-- **v0.52-53**: Revert name git to Bjornulf_custom_nodes, match registry comfy
+- **v0.52-53**: Revert name git to Emiguru_custom_nodes, match registry comfy
 - **v0.54-55**: add opencv-python to requirements.txt
 - **0.56**: ❗Breaking changes : ollama node simplified, no ollama_ip.txt needed, waiting for collection ollama nodes to be ready.
 - **0.57**: ❗❗Huge changes, new Ollama node "Ollama Chat" with real functionalities. 5 Ollama nodes total. (Model selector + Job selector + Persona selector + Ollama vision + Ollama Talk) Ollama talk use context and can use context file. Add number of lines / current counter + next to sequential nodes. Add new node STT. (+ faster_whisper dep) better management of empty loras/checkpoints on selectors. (list preset) Add "default_for_language" for TTS node, taking the default voice for a language (ex: fr/default.wav) Otherwise take the first wav with the selected language.
@@ -439,7 +439,7 @@ cd /where/you/installed/ComfyUI && python main.py
 - **0.68**: Update kokoro TTS node with connect_to_workflow and same outputs as XTTS.
 - **0.69**: Small fixes
 - **0.70**: ❗Breaking changes : "Line Selector Node" is now a "universal node" : manual selection, random, and LOOP + Sequential.
-Text replace now have multine option for regex. (https://github.com/justUmen/Bjornulf_custom_nodes/issues/17) - can remove <think> tag from ollama.  
+Text replace now have multine option for regex. (https://github.com/justUmen/Emiguru_custom_nodes/issues/17) - can remove <think> tag from ollama.  
 8 new nodes : "🖼👁 Preview (first) image", "💾 Huggingface Downloader", "👑 Combine Loras, Lora stack", "📥 Load Global Variables", "💾 Save Global Variables", "📝👈 Model-Clip-Vae selector (🎲 or ♻ or ♻📑)", "📒 Note", "🖼📒 Image Note".
 Fix a lot of code everywhere, a little better logging system, etc...  
 WIP : Rewrite of all my ffmpeg nodes. (Still need improvements and fixes, will do that in 0.71?) Maybe don't use them yet...
@@ -625,20 +625,20 @@ The other node will save the image to the exact path.
 **Description:**  
 Save the given text input to a file. Useful for logging and storing text data.  
 If the file already exist, it will add the text at the end of the file.  
-I recommend you to keep saving them in "Bjornulf/Text" (Which is in the Comfyui folder, next to output), this is where the node 116 `Load text from folder` is looking for text files.  
+I recommend you to keep saving them in "Emiguru/Text" (Which is in the Comfyui folder, next to output), this is where the node 116 `Load text from folder` is looking for text files.  
 
 ![Save Text](screenshots/save_text.png)
 
-## 16 - 💾🖼💬 Save image for Bjornulf LobeChat (❗For my custom [lobe-chat](https://github.com/justUmen/Bjornulf_lobe-chat)❗)
+## 16 - 💾🖼💬 Save image for Emiguru LobeChat (❗For my custom [lobe-chat](https://github.com/justUmen/emiguru_lobe-chat)❗)
 
 **Description:**  
-❓ I made that node for my custom lobe-chat to send+receive images from Comfyui API : [lobe-chat](https://github.com/justUmen/Bjornulf_lobe-chat)  
-It will save the image in the folder `output/BJORNULF_LOBECHAT/`. 
+❓ I made that node for my custom lobe-chat to send+receive images from Comfyui API : [lobe-chat](https://github.com/justUmen/emiguru_lobe-chat)  
+It will save the image in the folder `output/emiguru_LOBECHAT/`. 
 The name will start at `api_00001.png`, then `api_00002.png`, etc...  
-It will also create a link to the last generated image at the location `output/BJORNULF_API_LAST_IMAGE.png`.  
+It will also create a link to the last generated image at the location `output/emiguru_API_LAST_IMAGE.png`.  
 This link will be used by my custom lobe-chat to copy the image inside the lobe-chat project.  
 
-![Save Bjornulf Lobechat](screenshots/save_bjornulf_lobechat.png)
+![Save Emiguru Lobechat](screenshots/save_emiguru_lobechat.png)
 
 ## 17 - 💾🖼 Save image as `tmp_api.png` Temporary API ⚠️💣
 
@@ -667,12 +667,12 @@ Example of basic usage :
 Example of usage with context, notice that with context you can follow up a conversation, "there" is clearly understood as "Bucharest" :  
 ![Ollama](screenshots/2_ollama_context.png)  
 
-You can also use `use_context_file` (set to True), this will save the context in a file : `ComfyUI/Bjornulf/ollama_context.txt`.  
+You can also use `use_context_file` (set to True), this will save the context in a file : `ComfyUI/Emiguru/ollama_context.txt`.  
 This way you can keep using the context without having to connect many nodes connected to each other, just run the same workflow several times.  
 
 ### Example in 3 steps of context file conversation
 
-Step 1 : Notice that for now context is empty, so it will be the first message in `ComfyUI/Bjornulf/ollama_context.txt` :  
+Step 1 : Notice that for now context is empty, so it will be the first message in `ComfyUI/Emiguru/ollama_context.txt` :  
 ![Ollama](screenshots/3_ollama_contextFile_1.png)  
 
 Step 2 : Notice that now the number of lines in context file has changed (These are the same as the `updated_context`):  
@@ -681,7 +681,7 @@ Step 2 : Notice that now the number of lines in context file has changed (These 
 Step 3 : Notice that the number of lines keep incrementing.  
 ![Ollama](screenshots/3_ollama_contextFile_3.png)  
 
-When clicking the `reset Button`, it will also save the context in : `ComfyUI/Bjornulf/ollama_context_001.txt`, `ComfyUI/Bjornulf/ollama_context_002.txt`, etc...  
+When clicking the `reset Button`, it will also save the context in : `ComfyUI/Emiguru/ollama_context_001.txt`, `ComfyUI/Emiguru/ollama_context_002.txt`, etc...  
 
 ⚠️ If you want to have an "interactive" conversation, you can enable the option `waiting_for_prompt`.  
 When set to True, it will create a `Resume` button, use this to unpause the node and process the prompt.  
@@ -830,22 +830,22 @@ Use my TTS server to generate high quality speech from text, with any voice you 
 ❗ Node never tested on windows, only on linux for now. ❗  
 
 Use my TTS server to generate speech from text, based on XTTS v2.  
-❗ Of course to use this comfyui node (frontend) you need to use my TTS server (backend) : <https://github.com/justUmen/Bjornulf_XTTS>  
-I made this backend for <https://github.com/justUmen/Bjornulf_lobe-chat>, but you can use it with comfyui too with this node.  
-After having `Bjornulf_XTTS` installed, you NEED to create a link in my Comfyui custom node folder called `speakers` : `ComfyUI/custom_nodes/Bjornulf_custom_nodes/speakers`  
+❗ Of course to use this comfyui node (frontend) you need to use my TTS server (backend) : <https://github.com/justUmen/emiguru_XTTS>  
+I made this backend for <https://github.com/justUmen/emiguru_lobe-chat>, but you can use it with comfyui too with this node.  
+After having `Emiguru_XTTS` installed, you NEED to create a link in my Comfyui custom node folder called `speakers` : `ComfyUI/custom_nodes/Emiguru_custom_nodes/speakers`  
 That link must be a link to the folder where you installed/stored the voice samples you use for my TTS, like `default.wav`.  
 If my TTS server is running on port 8020 (You can test in browser with the link <http://localhost:8020/tts_stream?language=en&speaker_wav=default&text=Hello>) and voice samples are good, you can use this node to generate speech from text.  
 
 **Details**  
 This node should always be connected to a core node : `Preview audio`.  
 
-My node will generate and save the audio files in the `ComfyUI/Bjornulf_TTS/` folder, followed by the language selected, the name of the voice sample, and the text.  
-Example of audio file from the screenshot above : `ComfyUI/Bjornulf_TTS/Chinese/default.wav/你吃了吗.wav`  
+My node will generate and save the audio files in the `ComfyUI/emiguru_TTS/` folder, followed by the language selected, the name of the voice sample, and the text.  
+Example of audio file from the screenshot above : `ComfyUI/emiguru_TTS/Chinese/default.wav/你吃了吗.wav`  
 You can notice that you don't NEED to select a chinese voice to speak chinese. Yes it will work, you can record yourself and make yourself speak whatever language you want.  
-Also, when you select a voice with this format `fr/fake_Bjornulf.wav`, it will create an extra folder `fr` of course. : `ComfyUI/Bjornulf_TTS/English/fr/fake_Bjornulf.wav/hello_im_me.wav`. Easy to see that you are using a french voice sample for an english recording.  
+Also, when you select a voice with this format `fr/fake_Emiguru.wav`, it will create an extra folder `fr` of course. : `ComfyUI/emiguru_TTS/English/fr/fake_Emiguru.wav/hello_im_me.wav`. Easy to see that you are using a french voice sample for an english recording.  
 
 `control_after_generate` as usual, it is used to force the node to rerun for every workflow run. (Even if there is no modification of the node or its inputs.)  
-`overwrite` is used to overwrite the audio file if it already exists. (For example if you don't like the generation, just set overwrite to True and run the workflow again, until you have a good result. After you can set it to back to False. (Paraphrasing : without overwrite set to True, It won't generate the audio file again if it already exists in the `Bjornulf_TTS` folder.)  
+`overwrite` is used to overwrite the audio file if it already exists. (For example if you don't like the generation, just set overwrite to True and run the workflow again, until you have a good result. After you can set it to back to False. (Paraphrasing : without overwrite set to True, It won't generate the audio file again if it already exists in the `Emiguru_TTS` folder.)  
 `autoplay` is used to play the audio file inside the node when it is executed. (Manual replay or save is done in the `preview audio` node.)  
 
 So... note that if you know you have an audio file ready to play, you can still use my node but you do NOT need my TTS server to be running.
@@ -867,7 +867,7 @@ If you can afford to run both at the same time, good for you, but Locally I can'
 ### 32 - 🧑📝 Character Description Generator
 
 **Description:**  
-Generate a character description based on a json file in the folder `characters` : `ComfyUI/custom_nodes/Bjornulf_custom_nodes/characters`  
+Generate a character description based on a json file in the folder `characters` : `ComfyUI/custom_nodes/Emiguru_custom_nodes/characters`  
 Make your own json file with your own characters, and use this node to generate a description.  
 
 ![characters](screenshots/characters.png)
@@ -1010,10 +1010,10 @@ If you want to know how i personnaly save my images for a specific character, he
 In this example I put "character/" as a string and then combine with "nothing". But it's the same if you do "character" and then combine with "/". (I just like having a / at the end of my folder's name...)  
 
 If you are satisfied with this logic, you can then select all these nodes, right click and `Convert to Group Node`, you can then have your own customized "save character node" :  
-![pick input](screenshots/bjornulf_save_character_group.png)
+![pick input](screenshots/emiguru_save_character_group.png)
 
 Here is another example of the same thing but excluding the save folder node :  
-![pick input](screenshots/bjornulf_save_character_group2.png)
+![pick input](screenshots/emiguru_save_character_group2.png)
 
 ⚠️ If you really want to regroup all the images in one flow, you can use my node 47 `Combine images` to put them all together.  
 
@@ -1201,7 +1201,7 @@ Just take a single Lora at random from a list of Loras.
 This loop works like a normal loop, BUT it is sequential : It will run only once for each workflow run !!!  
 The first time it will output the first integer, the second time the second integer, etc...  
 When the last is reached, the node will STOP the workflow, preventing anything else to run after it.  
-Under the hood it is using a single file `counter_integer.txt` in the `ComfyUI/Bjornulf` folder.  
+Under the hood it is using a single file `counter_integer.txt` in the `ComfyUI/Emiguru` folder.  
 ❗ Do not use more than one node like this one in a workflow, because they will share the same `counter_integer.txt` file. (unexpected behaviour.)
 Update 0.57: Now also contains the next counter in the reset button.  
 
@@ -1217,7 +1217,7 @@ This loop works like a normal loop, BUT it is sequential : It will run only once
 The first time it will output the first line, the second time the second line, etc...  
 You also have control of the line with +1 / -1 buttons.  
 When the last is reached, the node will STOP the workflow, preventing anything else to run after it.  
-Under the hood it is using the file `counter_lines.txt` in the `ComfyUI/Bjornulf` folder.  
+Under the hood it is using the file `counter_lines.txt` in the `ComfyUI/Emiguru` folder.  
 
 Here is an example of usage with my TTS node : when I have a list of sentences to process, if i don't like a version, I can just click on the -1 button, tick "overwrite" on TTS node and it will generate the same sentence again, repeat until good.  
 ❗ Do not use more than one node like this one in a workflow, because they will share the same `counter_lines.txt` file. (unexpected behaviour.)
@@ -1598,7 +1598,7 @@ Loop made to loop over elements for the node for female outfits.
 **Description:**  
 This is the same as a basic "Load checkpoint" node, but the list is from civitai (not your local folder).  
 It will also download the file from civitai if you don't have it on your computer yet. (You need an api token from your account. - Find yours on civitai.com settings. -)  
-This is the `sd1.5` version, it will download the models in : `ComfyUI/models/checkpoints/Bjornulf_civitAI/sd1.5`  
+This is the `sd1.5` version, it will download the models in : `ComfyUI/models/checkpoints/emiguru_civitAI/sd1.5`  
 After downloading, you can keep using this node as is to load your checkpoint, or use the downloaded model from a basic "Load checkpoint" node.  
 
 ![civitai_load_sd15](screenshots/civitai_load_sd15.png)  
@@ -1608,7 +1608,7 @@ After downloading, you can keep using this node as is to load your checkpoint, o
 **Description:**  
 This is the same as a basic "Load checkpoint" node, but the list is from civitai (not your local folder).  
 It will also download the file from civitai if you don't have it on your computer yet. (You need an api token from your account. - Find yours on civitai.com settings. -)  
-This is the `sdxl_1.0` version, it will download the models in : `ComfyUI/models/checkpoints/Bjornulf_civitAI/sdxl_1.0`  
+This is the `sdxl_1.0` version, it will download the models in : `ComfyUI/models/checkpoints/emiguru_civitAI/sdxl_1.0`  
 After downloading, you can keep using this node as is to load your checkpoint, or use the downloaded model from a basic "Load checkpoint" node.  
 
 ![civitai_load_sdxl](screenshots/civitai_load_sdxl.png)  
@@ -1618,7 +1618,7 @@ After downloading, you can keep using this node as is to load your checkpoint, o
 **Description:**  
 This is the same as a basic "Load checkpoint" node, but the list is from civitai (not your local folder).  
 It will also download the file from civitai if you don't have it on your computer yet. (You need an api token from your account. - Find yours on civitai.com settings. -)  
-This is the `pony` version, it will download the models in : `ComfyUI/models/checkpoints/Bjornulf_civitAI/pony`  
+This is the `pony` version, it will download the models in : `ComfyUI/models/checkpoints/emiguru_civitAI/pony`  
 After downloading, you can keep using this node as is to load your checkpoint, or use the downloaded model from a basic "Load checkpoint" node.  
 
 ![civitai_load_pony](screenshots/civitai_load_pony.png)  
@@ -1628,7 +1628,7 @@ After downloading, you can keep using this node as is to load your checkpoint, o
 **Description:**  
 This is the same as a basic "Load checkpoint" node, but the list is from civitai (not your local folder).  
 It will also download the file from civitai if you don't have it on your computer yet. (You need an api token from your account. - Find yours on civitai.com settings. -)  
-This is the `flux_d` version, it will download the models in : `ComfyUI/models/checkpoints/Bjornulf_civitAI/flux_d`  
+This is the `flux_d` version, it will download the models in : `ComfyUI/models/checkpoints/emiguru_civitAI/flux_d`  
 After downloading, you can keep using this node as is to load your checkpoint, or use the downloaded model from a basic "Load checkpoint" node.  
 
 🚧 Work in progress, need to manually clean up list, diffusers, etc.. ? 🚧
@@ -1638,7 +1638,7 @@ After downloading, you can keep using this node as is to load your checkpoint, o
 **Description:**  
 This is the same as a basic "Load checkpoint" node, but the list is from civitai (not your local folder).  
 It will also download the file from civitai if you don't have it on your computer yet. (You need an api token from your account. - Find yours on civitai.com settings. -)  
-This is the `flux_s` version, it will download the models in : `ComfyUI/models/checkpoints/Bjornulf_civitAI/flux_s`  
+This is the `flux_s` version, it will download the models in : `ComfyUI/models/checkpoints/emiguru_civitAI/flux_s`  
 After downloading, you can keep using this node as is to load your checkpoint, or use the downloaded model from a basic "Load checkpoint" node.  
 
 🚧 Work in progress, need to manually clean up list, diffusers, etc.. ? 🚧
@@ -1648,7 +1648,7 @@ After downloading, you can keep using this node as is to load your checkpoint, o
 **Description:**  
 This is the same as a basic "Load lora" node, but the list is from civitai (not your local folder).  
 It will also download the file from civitai if you don't have it on your computer yet. (You need an api token from your account. - Find yours on civitai.com settings. -)  
-This is the `sd_1.5` version, it will download the lora in : `ComfyUI/models/loras/Bjornulf_civitAI/sd_1.5`  
+This is the `sd_1.5` version, it will download the lora in : `ComfyUI/models/loras/emiguru_civitAI/sd_1.5`  
 After downloading, you can keep using this node as is to load your lora, or use the downloaded lora from a basic "Load lora" node.  
 
 Below is an example with Lora "Colorize" :  
@@ -1660,7 +1660,7 @@ Below is an example with Lora "Colorize" :
 **Description:**  
 This is the same as a basic "Load lora" node, but the list is from civitai (not your local folder).  
 It will also download the file from civitai if you don't have it on your computer yet. (You need an api token from your account. - Find yours on civitai.com settings. -)  
-This is the `sdxl_1.0` version, it will download the lora in : `ComfyUI/models/loras/Bjornulf_civitAI/sdxl_1.0`  
+This is the `sdxl_1.0` version, it will download the lora in : `ComfyUI/models/loras/emiguru_civitAI/sdxl_1.0`  
 After downloading, you can keep using this node as is to load your lora, or use the downloaded lora from a basic "Load lora" node.  
 
 Below is an example with Lora "Better faces" :  
@@ -1672,7 +1672,7 @@ Below is an example with Lora "Better faces" :
 **Description:**  
 This is the same as a basic "Load lora" node, but the list is from civitai (not your local folder).  
 It will also download the file from civitai if you don't have it on your computer yet. (You need an api token from your account. - Find yours on civitai.com settings. -)  
-This is the `pony` version, it will download the lora in : `ComfyUI/models/loras/Bjornulf_civitAI/pony`  
+This is the `pony` version, it will download the lora in : `ComfyUI/models/loras/emiguru_civitAI/pony`  
 After downloading, you can keep using this node as is to load your lora, or use the downloaded lora from a basic "Load lora" node.  
 
 ![civitai_lora_pony](screenshots/civitai_lora_pony.png)  
@@ -1753,14 +1753,14 @@ Load a lora by using it's path.
 Here is a complex practical example using node 113, 114, 112 :  
 ![load lora with path](screenshots/load_lora_with_path_COMPLEX.png)  
 
-#### 115 - 📥 Load Text From Bjornulf Folder
+#### 115 - 📥 Load Text From Emiguru Folder
 
 **Description:**  
 
-Just select a file from the folder `Bjornulf/Text` folder, it will recover its content.  
+Just select a file from the folder `Emiguru/Text` folder, it will recover its content.  
 It is made to be used with node 15 `Save Text`.  
 
-![Load Text](screenshots/load_text_from_Bjornulf.png)  
+![Load Text](screenshots/load_text_from_Emiguru.png)  
 
 #### 116 - 📥 Load Text From Path 
 
@@ -1770,7 +1770,7 @@ Just give the path of the file, it will recover its content.
 
 ![Load Text](screenshots/load_text_requirements.png)  
 
-If you want, with `Load Text From Path` you can also recover the elements in "Bjornulf/Text" by just adding it:  
+If you want, with `Load Text From Path` you can also recover the elements in "Emiguru/Text" by just adding it:  
 
 ![Load Text](screenshots/load_text_PATH.png)  
 
@@ -1842,14 +1842,14 @@ If you want to have multiple loras in a single node, well this is it.
 
 **Description:**  
 So if you know how to use variables with my nodes, this node gives you the opportunity to create global variables.  
-This node is very simple, it will just append (or overwrite) the file : `Bjornulf/GlobalVariables.txt` (You can edit that manually if you want.)
+This node is very simple, it will just append (or overwrite) the file : `Emiguru/GlobalVariables.txt` (You can edit that manually if you want.)
 
 ![Global Save](screenshots/global_save.png)  
 
 #### 124 - 📥🅰️ Load Global Variables
 
 **Description:**  
-This node will load the global variables as text from the file `Bjornulf/GlobalVariables.txt`.  
+This node will load the global variables as text from the file `Emiguru/GlobalVariables.txt`.  
 Here is an example of usage save/load :
 
 ![Global images](screenshots/global_load.png)  
@@ -2186,7 +2186,7 @@ It is very useful if you use node 150 as a LOOP, you can recover the images late
 **Description:**  
 
 This node must be used after using the node 150 + DO_NOT_WAIT + links_file.  
-When saving DO_NOT_WAIT and the "links_file" from the node 150, it will create a txt file in "ComfyUI/Bjornulf/civitai_links/", you can load them with this node.  
+When saving DO_NOT_WAIT and the "links_file" from the node 150, it will create a txt file in "ComfyUI/Emiguru/civitai_links/", you can load them with this node.  
 
 Below are the images recovered from the file "11_mars.txt":  
 

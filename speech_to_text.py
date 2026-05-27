@@ -28,7 +28,7 @@ class SpeechToText:
     RETURN_TYPES = ("STRING", "STRING", "STRING",)
     RETURN_NAMES = ("transcript", "detected_language","language_name",)
     FUNCTION = "transcribe_audio"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def tensor_to_wav(self, audio_tensor, sample_rate):
         """Convert audio tensor to temporary WAV file"""

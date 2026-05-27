@@ -15,7 +15,7 @@ class WriteTextPickMeChain:
     RETURN_NAMES = ("text", "chain_text")
     FUNCTION = "write_text"
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def write_text(self, text, picked, pickme_chain="", **kwargs):
         chain_output = text if picked else pickme_chain

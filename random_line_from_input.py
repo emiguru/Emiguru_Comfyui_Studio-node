@@ -13,7 +13,7 @@ class RandomLineFromInput:
     RETURN_TYPES = ("STRING",)
     FUNCTION = "random_line"
     OUTPUT_IS_LIST = (False,)
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def random_line(self, text, seed):
         random.seed(seed)

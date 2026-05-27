@@ -10,7 +10,7 @@ import shutil
 
 class CombineVideoAudio:
     def __init__(self):
-        self.base_dir = "Bjornulf"
+        self.base_dir = "Emiguru"
         self.temp_dir = os.path.join(self.base_dir, "temp_frames")
         self.output_dir = os.path.join(self.base_dir, "combined_output")
         os.makedirs(self.temp_dir, exist_ok=True)
@@ -32,7 +32,7 @@ class CombineVideoAudio:
     RETURN_TYPES = ("STRING", "FLOAT", "FLOAT", "INT")
     RETURN_NAMES = ("video_path", "video_duration", "fps", "number_of_frames")
     FUNCTION = "combine_audio_video"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def get_video_frame_count(self, video_path):
         try:

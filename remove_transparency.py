@@ -14,7 +14,7 @@ class RemoveTransparency:
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "process_transparency"
 
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def process_transparency(self, image, recover_background, background_color):
         # Check if the image has an alpha channel

@@ -1,9 +1,9 @@
 import { app } from "../../../scripts/app.js";
 
 app.registerExtension({
-    name: "Bjornulf.OllamaConfig",
+    name: "Emiguru.OllamaConfig",
     async nodeCreated(node) {
-        if (node.comfyClass === "Bjornulf_OllamaConfig") {
+        if (node.comfyClass === "Emiguru_OllamaConfig") {
             // Add model_list combo widget
             const modelListWidget = node.addWidget(
                 "combo",

@@ -13,7 +13,7 @@ class FreeVRAM:
     RETURN_TYPES = (Everything("*"),)
     RETURN_NAME = ("anything",)
     FUNCTION = "free_vram"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def free_vram(self, anything):
         print("Attempting to free VRAM...")
@@ -40,12 +40,12 @@ class FreeVRAM:
             "prompt": {
                 "3": {
                     "inputs": {"text": "free VRAM hack"},
-                    "class_type": "Bjornulf_WriteText",
+                    "class_type": "Emiguru_WriteText",
                     "_meta": {"title": "✒ Write Text"}
                 },
                 "4": {
                     "inputs": {"text_value": ["3", 0], "text": "free VRAM hack"},
-                    "class_type": "Bjornulf_ShowText",
+                    "class_type": "Emiguru_ShowText",
                     "_meta": {"title": "👁 Show (Text)"}
                 }
             }

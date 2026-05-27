@@ -3,9 +3,9 @@ import { api } from "../../../scripts/api.js";
 
 // Node-specific logic
 app.registerExtension({
-  name: "Bjornulf.OllamaTalk",
+  name: "Emiguru.OllamaTalk",
   async nodeCreated(node) {
-    if (node.comfyClass === "Bjornulf_OllamaTalk") {
+    if (node.comfyClass === "Emiguru_OllamaTalk") {
       // Set seed widget to hidden input
       // const seedWidget = node.widgets.find((w) => w.name === "seed");
       // if (seedWidget) {
@@ -54,7 +54,7 @@ app.registerExtension({
               if (data.success) {
                 // updateLineNumber();
                 updateResetButtonTextNode();
-                app.ui.dialog.show("[Ollama] Context saved in Bjornulf/ollama and reset successfully!");
+                app.ui.dialog.show("[Ollama] Context saved in Emiguru/ollama and reset successfully!");
               } else {
                 app.ui.dialog.show(
                   `[Ollama] Failed to reset Context: ${data.error || "Unknown error"}`);
@@ -76,7 +76,7 @@ app.registerExtension({
             node.widgets.findIndex((w) => w.name === "user_prompt")
           ];
 
-        fetch("/bjornulf_ollama_send_prompt", {
+        fetch("/emiguru_ollama_send_prompt", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -185,7 +185,7 @@ app.registerExtension({
       //If workflow is stopped during pause, cancel the run
       const original_api_interrupt = api.interrupt;
       api.interrupt = function () {
-          api.fetchApi('/bjornulf_ollama_interrupt', {
+          api.fetchApi('/emiguru_ollama_interrupt', {
               method: 'POST'
           });
           original_api_interrupt.apply(this, arguments);
@@ -201,11 +201,11 @@ app.registerExtension({
 //     }
 // });
 // app.registerExtension({
-//     name: "Bjornulf.OllamaContextChat",
+//     name: "Emiguru.OllamaContextChat",
 //     async nodeCreated(node) {
-//         if (node.comfyClass === "Bjornulf_OllamaContextChat") {
+//         if (node.comfyClass === "Emiguru_OllamaContextChat") {
 //             const resumeButton = node.addWidget("button", "Resume", "Resume", () => {
-//                 fetch('/bjornulf_ollama_send_prompt', { method: 'GET' })
+//                 fetch('/emiguru_ollama_send_prompt', { method: 'GET' })
 //                     .then(response => response.text())
 //                     .then(data => {
 //                         console.log('Resume response:', data);

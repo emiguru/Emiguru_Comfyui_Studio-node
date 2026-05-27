@@ -1,10 +1,10 @@
 // import { app } from "../../../scripts/app.js";
 
 // app.registerExtension({
-//     name: "Bjornulf.ImageNoteLoadImage",
+//     name: "Emiguru.ImageNoteLoadImage",
 //     async nodeCreated(node) {
 //         // Ensure the node is of the specific class
-//         if (node.comfyClass !== "Bjornulf_ImageNoteLoadImage") return;
+//         if (node.comfyClass !== "Emiguru_ImageNoteLoadImage") return;
 // 		console.log("node created");
 
 //         // Store the initial node size

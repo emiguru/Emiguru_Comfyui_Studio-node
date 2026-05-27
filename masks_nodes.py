@@ -14,7 +14,7 @@ class BodyPartSelectorMask:
     
     RETURN_TYPES = ("MASK",)
     FUNCTION = "process"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def process_single(self, mask_np, selection):
         """
@@ -110,7 +110,7 @@ class LargestMaskOnly:
     
     RETURN_TYPES = ("MASK",)
     FUNCTION = "process"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def process_single(self, mask_np, num_masks):
         """Process a single mask to keep the top num_masks largest components."""
@@ -173,7 +173,7 @@ class BoundingRectangleMask:
     
     RETURN_TYPES = ("MASK",)
     FUNCTION = "process"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def process_single(self, mask_np, up, down, right, left):
         active = mask_np > 0.5
@@ -240,7 +240,7 @@ class BoundingRectangleMaskBlur:
     
     RETURN_TYPES = ("MASK",)
     FUNCTION = "process"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def _get_bounding_box(self, mask_np):
         """Extract bounding box coordinates from active mask pixels."""

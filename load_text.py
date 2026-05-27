@@ -3,7 +3,7 @@ from server import PromptServer
 import aiohttp.web as web
 
 class LoadTextFromFolder:
-    default_dir = "Bjornulf/Text"
+    default_dir = "Emiguru/Text"
     
     @classmethod
     def INPUT_TYPES(cls):
@@ -34,13 +34,13 @@ class LoadTextFromFolder:
     RETURN_TYPES = ("STRING", "STRING", "STRING")
     RETURN_NAMES = ("text", "filename", "full_path")
     FUNCTION = "load_text"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def load_text(self, text_file):
         """Load text from the selected file"""
         try:
             if text_file == "no_files_found":
-                raise ValueError("No text files found in Bjornulf/Text folder")
+                raise ValueError("No text files found in Emiguru/Text folder")
             filepath = os.path.join(self.default_dir, text_file)
             if not os.path.exists(filepath):
                 raise ValueError(f"File not found: {filepath}")
@@ -73,14 +73,14 @@ class LoadTextFromPath:
         """Define input parameters for the node"""
         return {
             "required": {
-                "file_path": ("STRING", {"default": "Bjornulf/Text/example.txt"}),
+                "file_path": ("STRING", {"default": "Emiguru/Text/example.txt"}),
             }
         }
 
     RETURN_TYPES = ("STRING", "STRING", "STRING")
     RETURN_NAMES = ("text", "filename", "full_path")
     FUNCTION = "load_text"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def load_text(self, file_path):
         try:

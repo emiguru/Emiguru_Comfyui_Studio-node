@@ -1,9 +1,9 @@
 import { app } from "../../../scripts/app.js";
 
 app.registerExtension({
-    name: "Bjornulf.RandomModelSelector",
+    name: "Emiguru.RandomModelSelector",
     async nodeCreated(node) {
-        if (node.comfyClass === "Bjornulf_RandomModelSelector") {
+        if (node.comfyClass === "Emiguru_RandomModelSelector") {
             const updateModelInputs = () => {
                 const numModelsWidget = node.widgets.find(w => w.name === "number_of_models");
                 if (!numModelsWidget) return;

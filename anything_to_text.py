@@ -17,7 +17,7 @@ class AnythingToText:
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("text",)
     FUNCTION = "any_to_text"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def any_to_text(self, anything):
         # Convert the input to string representation

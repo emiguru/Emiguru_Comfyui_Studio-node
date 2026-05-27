@@ -1,9 +1,9 @@
 import { app } from "../../../scripts/app.js";
 
 app.registerExtension({
-    name: "Bjornulf.RandomLoraSelector",
+    name: "Emiguru.RandomLoraSelector",
     async nodeCreated(node) {
-        if (node.comfyClass === "Bjornulf_RandomLoraSelector") {
+        if (node.comfyClass === "Emiguru_RandomLoraSelector") {
             node.properties = node.properties || {};
             const updateLoraInputs = () => {
                 const initialWidth = node.size[0];

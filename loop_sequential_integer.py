@@ -18,14 +18,14 @@ class LoopIntegerSequential:
     RETURN_TYPES = ("INT", "INT")
     RETURN_NAMES = ("int_value", "remaining_cycles")
     FUNCTION = "get_next_value"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     @classmethod
     def IS_CHANGED(cls, **kwargs):
         return float("NaN")  # This ensures the node always runs
 
     def get_next_value(self, from_this, to_that, jump):
-        counter_file = os.path.join("Bjornulf", "counter_integer.txt")
+        counter_file = os.path.join("Emiguru", "counter_integer.txt")
         os.makedirs(os.path.dirname(counter_file), exist_ok=True)
 
         try:
@@ -56,7 +56,7 @@ class LoopIntegerSequential:
 @PromptServer.instance.routes.post("/get_counter_value")
 async def get_counter_value(request):
     # logging.info("Get counter value called")
-    counter_file = os.path.join("Bjornulf", "counter_integer.txt")
+    counter_file = os.path.join("Emiguru", "counter_integer.txt")
     try:
         with open(counter_file, 'r') as f:
             current_index = int(f.read().strip())
@@ -69,7 +69,7 @@ async def get_counter_value(request):
 @PromptServer.instance.routes.post("/reset_counter")
 async def reset_counter(request):
     # logging.info("Reset counter called")
-    counter_file = os.path.join("Bjornulf", "counter_integer.txt")
+    counter_file = os.path.join("Emiguru", "counter_integer.txt")
     try:
         os.remove(counter_file)
         return web.json_response({"success": True}, status=200)

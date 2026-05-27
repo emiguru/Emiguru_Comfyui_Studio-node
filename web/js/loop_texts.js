@@ -1,9 +1,9 @@
 import { app } from "../../../scripts/app.js";
 
 app.registerExtension({
-    name: "Bjornulf.LoopTexts",
+    name: "Emiguru.LoopTexts",
     async nodeCreated(node) {
-        if (node.comfyClass === "Bjornulf_LoopTexts") {
+        if (node.comfyClass === "Emiguru_LoopTexts") {
             const updateInputs = () => {
                 const initialWidth = node.size[0];
                 const numInputsWidget = node.widgets.find(w => w.name === "number_of_inputs");

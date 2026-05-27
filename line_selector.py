@@ -32,7 +32,7 @@ class LineSelector:
     RETURN_NAMES = ("text", "remaining_cycles", "current_line")
     OUTPUT_IS_LIST = (True, False, False)
     FUNCTION = "select_line"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def find_variables(self, text):
         """Identify nested curly brace sections in the text."""
@@ -218,7 +218,7 @@ class LineSelector:
             return (["No valid lines found."], 0, 0)
         
         if LOOP_SEQUENTIAL:
-            counter_file = os.path.join("Bjornulf", "line_selector_counter.txt")
+            counter_file = os.path.join("Emiguru", "line_selector_counter.txt")
             os.makedirs(os.path.dirname(counter_file), exist_ok=True)
             try:
                 with open(counter_file, 'r') as f:
@@ -256,7 +256,7 @@ class LineSelector:
 
 @PromptServer.instance.routes.post("/reset_line_selector_counter")
 async def reset_line_selector_counter(request):
-    counter_file = os.path.join("Bjornulf", "line_selector_counter.txt")
+    counter_file = os.path.join("Emiguru", "line_selector_counter.txt")
     try:
         os.remove(counter_file)
         return web.json_response({"success": True}, status=200)
@@ -267,7 +267,7 @@ async def reset_line_selector_counter(request):
 
 @PromptServer.instance.routes.post("/get_line_selector_counter")
 async def get_line_selector_counter(request):
-    counter_file = os.path.join("Bjornulf", "line_selector_counter.txt")
+    counter_file = os.path.join("Emiguru", "line_selector_counter.txt")
     try:
         with open(counter_file, 'r') as f:
             current_index = int(f.read().strip())

@@ -28,7 +28,7 @@ class LoopCombosSamplersSchedulers:
     RETURN_NAMES = ("sampler_name", "scheduler",)
     OUTPUT_IS_LIST = (True, False)
     FUNCTION = "create_loop_combination"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def create_loop_combination(self, combination):
         if combination == "ALL 6 COMBINATIONS (sgm_uniform)":

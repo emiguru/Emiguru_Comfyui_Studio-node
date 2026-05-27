@@ -29,13 +29,13 @@ class VideoPreview:
 
     RETURN_TYPES = ()
     FUNCTION = "preview_video"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     OUTPUT_NODE = True
 
     def preview_video(self, fps_for_IMAGES, autoplay, mute, loop, video_path="", IMAGES=None):
         try:
             # Destination directory for preview videos
-            dest_dir = os.path.join("output", "Bjornulf", "preview_video")
+            dest_dir = os.path.join("output", "Emiguru", "preview_video")
             os.makedirs(dest_dir, exist_ok=True)
 
             # Determine which input is provided
@@ -62,7 +62,7 @@ class VideoPreview:
 
             elif IMAGES is not None and len(IMAGES) > 0:
                 # Use a unique temporary directory for this run
-                with tempfile.TemporaryDirectory(prefix="bjornulf_temp_video_") as temp_dir:
+                with tempfile.TemporaryDirectory(prefix="emiguru_temp_video_") as temp_dir:
                     # Convert image tensors to files in the unique temp directory
                     image_files = []
                     for i, img_tensor in enumerate(IMAGES):
@@ -112,7 +112,7 @@ class VideoPreview:
             # Successful return with video data
             return {
                 "ui": {
-                    "video": [dest_name, "Bjornulf/preview_video"],
+                    "video": [dest_name, "Emiguru/preview_video"],
                     "metadata": {
                         "width": 512,
                         "height": 512,

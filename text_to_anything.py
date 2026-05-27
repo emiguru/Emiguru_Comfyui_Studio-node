@@ -17,7 +17,7 @@ class TextToAnything:
     RETURN_TYPES = (Everything("*"),)
     RETURN_NAMES = ("anything",)
     FUNCTION = "text_to_any"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def text_to_any(self, text):
         return (text,)

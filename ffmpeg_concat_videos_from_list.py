@@ -21,11 +21,11 @@ class ConcatVideosFromList:
     RETURN_NAMES = ("concat_path", "ffmpeg_command",)
     FUNCTION = "concat_videos"
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def __init__(self):
         self.work_dir = Path(os.path.abspath("temp_concat"))
-        self.output_dir = Path(os.path.abspath("Bjornulf/concat_videos"))
+        self.output_dir = Path(os.path.abspath("Emiguru/concat_videos"))
         os.makedirs(self.work_dir, exist_ok=True)
         os.makedirs(self.output_dir, exist_ok=True)
 

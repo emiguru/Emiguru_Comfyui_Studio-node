@@ -15,7 +15,7 @@ class SwitchAnything:
     RETURN_TYPES = (Everything("*"),)
     RETURN_NAMES = ("anything",)
     FUNCTION = "process_switch"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def process_switch(self, anything, switch):
         if switch:
@@ -37,7 +37,7 @@ class SwitchText:
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("STRING",)
     FUNCTION = "process_switch"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def process_switch(self, STRING, switch, ONLY_ME_combine_text):
         if ONLY_ME_combine_text:

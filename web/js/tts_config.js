@@ -7,9 +7,9 @@ const language_map = {
     "zh-cn": "Chinese"
 }
 app.registerExtension({
-    name: "Bjornulf.XTTSConfig",
+    name: "Emiguru.XTTSConfig",
     async nodeCreated(node) {
-        if (node.comfyClass === "Bjornulf_XTTSConfig") {
+        if (node.comfyClass === "Emiguru_XTTSConfig") {
             // Add language combo widget
             const languageWidget = node.widgets.find(w => w.name === "language");
 
@@ -31,8 +31,8 @@ app.registerExtension({
             // Function to update voices based on selected language
             const updateVoicesForLanguage = async (selectedLanguage) => {
                 try {
-                    // const response = await fetch('/bjornulf_xtts_get_voices', {
-                    const response = await fetch('/bjornulf_TTS_get_voices', {
+                    // const response = await fetch('/emiguru_xtts_get_voices', {
+                    const response = await fetch('/emiguru_TTS_get_voices', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',

@@ -16,7 +16,7 @@ class AudioVideoSync:
     
     def __init__(self):
         """Initialize the AudioVideoSync node."""
-        self.base_dir = "Bjornulf"
+        self.base_dir = "Emiguru"
         self.temp_dir = os.path.join(self.base_dir, "temp_frames")
         self.sync_video_dir = os.path.join(self.base_dir, "sync_video")
         self.sync_audio_dir = os.path.join(self.base_dir, "sync_audio")
@@ -71,7 +71,7 @@ class AudioVideoSync:
                     "input_video_duration", "sync_video_duration", "input_audio_duration", "sync_audio_duration",
                     "sync_video_frame_count")
     FUNCTION = "sync_audio_video"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def generate_timestamp(self):
         """Generate a unique timestamp for file naming."""

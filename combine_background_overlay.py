@@ -20,7 +20,7 @@ class CombineBackgroundOverlay:
     RETURN_TYPES = ("IMAGE", "MASK")
     RETURN_NAMES = ("image", "mask")
     FUNCTION = "combine_background_overlay"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def combine_background_overlay(self, background, overlay, horizontal_position, vertical_position, mask=None):
         results = []

@@ -18,7 +18,7 @@ class AnythingToFloat:
     RETURN_TYPES = ("FLOAT",)
     RETURN_NAMES = ("float",)
     FUNCTION = "any_to_float"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def any_to_float(self, anything):
         try:

@@ -19,7 +19,7 @@ class MergeImagesHorizontally:
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "combine_images"
 
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def combine_images(self, image1, image2, image3=None, image4=None):
         # Collect all provided images

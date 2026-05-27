@@ -29,7 +29,7 @@ class imagesToVideo:
     RETURN_NAMES = ("comment", "ffmpeg_command", "video_path",)
     FUNCTION = "image_to_video"
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def parse_ffmpeg_config(self, config_json):
         if not config_json:
@@ -180,7 +180,7 @@ class imagesToVideo:
         output_file = self.get_next_filename(output_base, format)
         
         # Clean up and prepare temporary directory
-        temp_dir = os.path.join("Bjornulf", "temp_images_imgs2video")  # Use os.path.join for cross-platform compatibility
+        temp_dir = os.path.join("Emiguru", "temp_images_imgs2video")  # Use os.path.join for cross-platform compatibility
         if os.path.exists(temp_dir) and os.path.isdir(temp_dir):
             for file in os.listdir(temp_dir):
                 os.remove(os.path.join(temp_dir, file))

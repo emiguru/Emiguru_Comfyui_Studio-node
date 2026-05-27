@@ -29,7 +29,7 @@ class IfElse:
     RETURN_TYPES = (Everything("*"), Everything("*"), "STRING", "STRING", "STRING")
     RETURN_NAMES = ("output", "rejected", "input_type", "true_or_false", "details")
     FUNCTION = "if_else"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def if_else(self, input, send_if_true, compare_with, input_type, send_if_false=None):
         result = False

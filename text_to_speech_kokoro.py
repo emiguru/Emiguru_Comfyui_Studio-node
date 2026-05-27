@@ -45,7 +45,7 @@ def download_if_not_exists(url, dest_path):
         print(f"Downloaded {os.path.basename(dest_path)}")
 
 class KokoroTTS:
-    BASE_DIR = "Bjornulf/Kokoro"
+    BASE_DIR = "Emiguru/Kokoro"
     MODEL_FILE = os.path.join(BASE_DIR, "kokoro-v0_19.onnx")
     VOICES_FILE = os.path.join(BASE_DIR, "voices.bin")
 
@@ -74,7 +74,7 @@ class KokoroTTS:
     RETURN_TYPES = ("AUDIO", "STRING", "STRING", "FLOAT")
     RETURN_NAMES = ("AUDIO", "audio_path", "audio_full_path", "audio_duration")
     FUNCTION = "generate_audio"
-    CATEGORY = "Bjornulf/Kokoro"
+    CATEGORY = "Emiguru/Kokoro"
 
     def generate_audio(self, text: str, voice: str, language: str, speed: float,
                       autoplay: bool, save_audio: bool, 
@@ -110,7 +110,7 @@ class KokoroTTS:
 
             # Check if file exists and overwrite is False
             sanitized_text = ''.join(c if c.isalnum() else '_' for c in text[:50])
-            save_path = os.path.join("Bjornulf_TTS_Kokoro", voice_id, f"{sanitized_text}.wav")
+            save_path = os.path.join("Emiguru_TTS_Kokoro", voice_id, f"{sanitized_text}.wav")
             full_path = os.path.abspath(save_path)
 
             if os.path.exists(full_path) and not overwrite:

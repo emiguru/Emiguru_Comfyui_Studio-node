@@ -39,7 +39,7 @@ class ScramblerCharacter:
 
     RETURN_TYPES = ("STRING",)
     FUNCTION = "scramble_words"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def scramble_words(self, text, seed=None, **kwargs):
         if seed is not None:

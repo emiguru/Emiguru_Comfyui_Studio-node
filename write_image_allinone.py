@@ -17,7 +17,7 @@ class WriteImageAllInOne:
     RETURN_NAMES = ("text",)
     FUNCTION = "write_image_allinone"
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def write_image_allinone(self, art_style, location, lighting, camera_angle, other=""):
         text = f"Art Style: {art_style}\n\n"

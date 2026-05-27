@@ -20,7 +20,7 @@ class VideoPingPong:
     RETURN_TYPES = ("IMAGE",)
     RETURN_NAMES = ("IMAGES",)
     FUNCTION = "pingpong_images"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def extract_frames(self, video_path, temp_dir, use_python_ffmpeg):
         """Extract frames from a video file using FFmpeg, preserving original settings."""

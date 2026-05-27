@@ -41,7 +41,7 @@ class OllamaTalk:
     RETURN_TYPES = ("STRING", "STRING", "STRING")
     RETURN_NAMES = ("ollama_response", "updated_context", "system_prompt")
     FUNCTION = "chat_response"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     is_paused = True
     is_interrupted = False
@@ -87,14 +87,14 @@ class OllamaTalk:
         return float(0)
 
     def save_context(self, context):
-        os_path = os.path.join("Bjornulf", "ollama", "ollama_context.txt")
+        os_path = os.path.join("Emiguru", "ollama", "ollama_context.txt")
         os.makedirs(os.path.dirname(os_path), exist_ok=True)
         with open(os_path, "a", encoding="utf-8") as f:
             f.write(context + "\n")
             # f.write(context + "\n" + "-" * 80 + "\n")
 
     def load_context(self):
-        os_path = os.path.join("Bjornulf", "ollama", "ollama_context.txt")
+        os_path = os.path.join("Emiguru", "ollama", "ollama_context.txt")
         if os.path.exists(os_path):
             with open(os_path, "r", encoding="utf-8") as f:
                 return f.read().strip()
@@ -188,7 +188,7 @@ class OllamaTalk:
             result, updated_context = self.process_ollama_request(user_prompt, answer_single_line, max_tokens, use_context_file)
             return (result, updated_context, OLLAMA_JOB["prompt"] if OLLAMA_JOB else "")
     
-@PromptServer.instance.routes.post("/bjornulf_ollama_send_prompt")
+@PromptServer.instance.routes.post("/emiguru_ollama_send_prompt")
 async def resume_node(request):
     if OllamaTalk.current_instance:
         instance = OllamaTalk.current_instance
@@ -213,7 +213,7 @@ async def resume_node(request):
 
 @PromptServer.instance.routes.post("/get_current_context_size")
 async def get_current_context_size(request):
-    counter_file = os.path.join("Bjornulf", "ollama", "ollama_context.txt")
+    counter_file = os.path.join("Emiguru", "ollama", "ollama_context.txt")
     try:
         if not os.path.exists(counter_file):
             logging.info("[Ollama] Context file does not exist")
@@ -265,7 +265,7 @@ def get_next_filename(base_path, base_name):
 @PromptServer.instance.routes.post("/reset_lines_context")
 def reset_lines_context(request):
     # logging.info("Reset lines counter called")
-    base_dir = os.path.join("Bjornulf", "ollama")
+    base_dir = os.path.join("Emiguru", "ollama")
     base_file = "ollama_context"
     counter_file = os.path.join(base_dir, f"{base_file}.txt")
     
@@ -304,7 +304,7 @@ def reset_lines_context(request):
             }
         }, status=500)
 
-@PromptServer.instance.routes.post("/bjornulf_ollama_interrupt")
+@PromptServer.instance.routes.post("/emiguru_ollama_interrupt")
 async def interrupt_node(request):
     OllamaTalk.is_interrupted = True
     return web.Response(text="Node interrupted")

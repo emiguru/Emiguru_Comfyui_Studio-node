@@ -11,7 +11,7 @@ class ShowInt:
     FUNCTION = "show_int"
     OUTPUT_NODE = True
     INPUT_IS_LIST = (True,)
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def detect_type(self, value):
         return 'integer'
@@ -33,7 +33,7 @@ class ShowFloat:
     FUNCTION = "show_float"
     OUTPUT_NODE = True
     INPUT_IS_LIST = (True,)
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def detect_type(self, value):
         return 'float'
@@ -56,7 +56,7 @@ class ShowStringText:
     FUNCTION = "show_string"
     OUTPUT_NODE = True
     INPUT_IS_LIST = (True,)
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def detect_type(self, value):
         if isinstance(value, int):
@@ -96,7 +96,7 @@ class ShowJson:
     FUNCTION = "show_json"
     OUTPUT_NODE = True
     INPUT_IS_LIST = (True,)
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def detect_type(self, value):
         if isinstance(value, int):

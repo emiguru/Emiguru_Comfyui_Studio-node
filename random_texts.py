@@ -17,7 +17,7 @@ class RandomTexts:
     RETURN_TYPES = ("STRING",)
     FUNCTION = "random_texts"
     OUTPUT_IS_LIST = (True,)
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def random_texts(self, number_of_inputs, number_of_random, seed, **kwargs):
         random.seed(seed)

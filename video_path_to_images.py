@@ -18,7 +18,7 @@ class VideoToImagesList:
     RETURN_TYPES = ("IMAGE", "FLOAT", "FLOAT", "INT")
     RETURN_NAMES = ("IMAGE", "initial_fps", "new_fps", "total_frames")
     FUNCTION = "video_to_images"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def video_to_images(self, video_path, frame_interval=1, max_frames=0):
         if not os.path.exists(video_path):

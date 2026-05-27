@@ -15,7 +15,7 @@ class LoopTexts:
     RETURN_TYPES = ("STRING",)
     FUNCTION = "loop_texts"
     OUTPUT_IS_LIST = (True,)
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def loop_texts(self, number_of_inputs, **kwargs):
         text_list = [kwargs[f"text_{i}"] for i in range(1, number_of_inputs + 1) if f"text_{i}" in kwargs]

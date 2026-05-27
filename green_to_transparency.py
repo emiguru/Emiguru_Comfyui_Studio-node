@@ -17,7 +17,7 @@ class GreenScreenToTransparency:
     FUNCTION = "remove_green_screen"
     RETURN_TYPES = ("IMAGE",)
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def remove_green_screen(self, image, threshold=0.1, prompt=None, extra_pnginfo=None):
         # Ensure the input image is on CPU and convert to numpy array

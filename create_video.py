@@ -21,7 +21,7 @@ class imgs2vid:
     RETURN_NAMES = ("comment",)
     FUNCTION = "create_video"
     OUTPUT_NODE = True
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def create_video(self, images, fps, video_name_NO_format, format, audio_path):
         # Remove any existing extension

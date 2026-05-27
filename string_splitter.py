@@ -22,7 +22,7 @@ class TextSplitin5:
     RETURN_TYPES = ("STRING", "STRING", "STRING", "STRING", "STRING")
     RETURN_NAMES = ("part1", "part2", "part3", "part4", "part5")
     FUNCTION = "split_string"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def split_string(self, input_string, delimiter, ignore_before_equals):
         # Handle the special case for newline delimiter
@@ -72,7 +72,7 @@ class TextSplitin10:
     RETURN_TYPES = ("STRING", "STRING", "STRING", "STRING", "STRING","STRING", "STRING", "STRING", "STRING", "STRING")
     RETURN_NAMES = ("part1", "part2", "part3", "part4", "part5", "part6", "part7", "part8", "part9", "part10")
     FUNCTION = "split_string"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def split_string(self, input_string, delimiter, ignore_before_equals):
         # Handle the special case for newline delimiter

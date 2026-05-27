@@ -14,7 +14,7 @@ class ShowText:
     FUNCTION = "show_text"
     OUTPUT_NODE = True
     INPUT_IS_LIST = (True,)
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
     
     def detect_type(self, value):
         if isinstance(value, int):

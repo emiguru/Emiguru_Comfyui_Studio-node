@@ -15,7 +15,7 @@ class AddLineNumbers:
     
     RETURN_TYPES = ("STRING",)
     FUNCTION = "add_line_numbers"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def add_line_numbers(self, text):
         lines = text.split('\n')

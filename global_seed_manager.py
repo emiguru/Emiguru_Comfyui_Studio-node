@@ -14,7 +14,7 @@ class GlobalSeedManager:
     RETURN_TYPES = ("INT", "STRING", "INT", "STRING")
     RETURN_NAMES = ("new_seed_INT", "new_seed_STRING", "previous_seed_INT", "all_seeds_LIST")
     FUNCTION = "generate_seed"
-    CATEGORY = "Bjornulf"
+    CATEGORY = "Emiguru"
 
     def generate_seed(self, seed: int):
         # Use the provided seed instead of generating a new one
@@ -22,7 +22,7 @@ class GlobalSeedManager:
         seed_str = str(new_seed)
         
         # Define file path
-        file_path = "Bjornulf/random_seeds.txt"
+        file_path = "Emiguru/random_seeds.txt"
         
         # Ensure directory exists
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
@@ -52,7 +52,7 @@ class GlobalSeedManager:
 # Define the API endpoint to delete the seeds file
 @PromptServer.instance.routes.post("/delete_random_seeds")
 async def delete_random_seeds(request):
-    file_path = "Bjornulf/random_seeds.txt"
+    file_path = "Emiguru/random_seeds.txt"
     try:
         if os.path.exists(file_path):
             os.remove(file_path)
